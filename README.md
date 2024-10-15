@@ -1,26 +1,19 @@
 # LAMPS Drafts
 
-This is the working area for IETF [LAMPS Working Group](https://datatracker.ietf.org/wg/lamps/documents/) Internet-Drafts.
+This is an individual submission that is supposed to be submitted to IETF [LAMPS Working Group](https://datatracker.ietf.org/wg/lamps/).
 
-## Internet X.509 Public Key Infrastructure -- Certificate Management Protocol (CMP) - rfc4210bis
+## X.509 Certificate Extended Key Usage (EKU) for ERJU System Pillar
 
-* [Editor's Copy](https://lamps-wg.github.io/cmp-updates/#go.draft-ietf-lamps-rfc4210bis.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-rfc4210bis)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-rfc4210bis)
-* [Compare Editor's Copy to Working Group Draft](https://lamps-wg.github.io/cmp-updates/#go.draft-ietf-lamps-rfc4210bis.diff)
-
-## Internet X.509 Public Key Infrastructure -- HTTP Transfer for the Certificate Management Protocol (CMP) - rfc6712bis
-
-* [Editor's Copy](https://lamps-wg.github.io/cmp-updates/#go.draft-ietf-lamps-rfc6712bis.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-rfc6712bis)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-rfc6712bis)
-* [Compare Editor's Copy to Working Group Draft](https://lamps-wg.github.io/cmp-updates/#go.draft-ietf-lamps-rfc6712bis.diff)
+* [Editor's Copy](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-eu-rail-keyusages.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-brockhaus-lamps-eu-rail-keyusages)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-brockhaus-lamps-eu-rail-keyusages)
+* [Compare Editor's Copy to Working Group Draft](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-eu-rail-keyusages.diff)
 
 
 ## Contributing
 
 See the
-[guidelines for contributions](https://github.com/lamps-wg/cmp-updates/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/HBrock/eu-rail-keyusages/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.

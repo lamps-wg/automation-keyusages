@@ -20,6 +20,8 @@ keyword:
 - extension
 - PKI
 date: 2024
+github: "HBrock/eu-rail-keyusages"
+latest: "https://HBrock.github.io/eu-rail-keyusages/draft-brockhaus-lamps-eu-rail-keyusages.html"
 author:
 - name: Hendrik Brockhaus
   org: Siemens
