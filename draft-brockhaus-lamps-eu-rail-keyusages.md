@@ -78,7 +78,7 @@ informative:
     title: 'Directive 2016/797 - Interoperability of the rail system within the EU'
     author:
     - org: European Parliament, Council of the European Union
-    date: '2020-05-28' 
+    date: '2020-05-28'
   ERJU:
     target: https://rail-research.europa.eu/wp-content/uploads/2023/10/ERJU_SP_CyberSecurity_Review3_Files.zip
     title: 'SP-Cybersecurity-SharedCybersecurityServices - Review 3 Final Draft Specs (V0.90)'
@@ -95,7 +95,7 @@ RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for 
 
 # Introduction {#Intro}
 
-The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements. The deliverables include due consideration of cyber-security aspects, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies. 
+The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements. The deliverables include due consideration of cyber-security aspects, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
 The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
 
@@ -167,7 +167,7 @@ id-kp  OBJECT IDENTIFIER  ::=
 
 id-kp-configSigning        OBJECT IDENTIFIER ::= { id-kp TBD2 }
 id-kp-trustanchorSigning   OBJECT IDENTIFIER ::= { id-kp TBD3 }
-id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 } 
+id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 }
 id-kp-safetyCommunication  OBJECT IDENTIFIER ::= { id-kp TBD5 }
 ~~~
 
@@ -246,7 +246,7 @@ id-kp OBJECT IDENTIFIER ::=
 
 id-kp-configSigning        OBJECT IDENTIFIER ::= { id-kp TBD2 }
 id-kp-trustanchorSigning   OBJECT IDENTIFIER ::= { id-kp TBD3 }
-id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 } 
+id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 }
 id-kp-safetyCommunication  OBJECT IDENTIFIER ::= { id-kp TBD5 }
 
 END
