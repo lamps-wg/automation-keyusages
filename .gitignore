@@ -17,8 +17,7 @@
 /versioned/
 Gemfile.lock
 archive.json
-draft-ietf-lamps-rfc4210bis.xml
-draft-todo-yourname-protocol.xml
+draft-brockhaus-lamps-eu-rail-keyusages.xml
 package-lock.json
 report.xml
 !requirements.txt
