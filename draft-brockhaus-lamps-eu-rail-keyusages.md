@@ -144,7 +144,7 @@ ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
 KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
 
-As described in {{RFC5280}}, the EKU extension may, at the option of the certificate issuer, be either critical or non-critical. The inclusion of KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication in a certificate indicates that the public key encoded in the certificate has been certified for the following usages:
+As described in {{RFC5280}}, the EKU extension may, at the option of the certificate issuer, be either critical or non-critical.  The inclusion of KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication in a certificate indicates that the public key encoded in the certificate has been certified for the following usages:
 
 * id-kp-configSigning
 
