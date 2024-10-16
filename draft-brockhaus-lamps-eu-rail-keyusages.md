@@ -32,7 +32,7 @@ author:
   country: Germany
   email: hendrik.brockhaus@siemens.com
   uri: https://www.siemens.com
-- name: Dr. David Goltzsche
+- name: David Goltzsche
   org: Siemens Mobility
   street: Ackerstraße 22
   code: '38126'
