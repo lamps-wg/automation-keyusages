@@ -148,19 +148,19 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-configSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files (typically, but not restricted to XML or JSON files). Configuration files are used to configure software. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files (for example XML or JSON files). Configuration files are used to configure software. The KU extension is set to digitalSignature or nonRepudiation.
 
 * id-kp-trustanchorSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files. Trust anchor configuration files are used to add or remove trust anchor to the trust store of a device. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files. Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device. The KU extension is set to digitalSignature or nonRepudiation.
 
 * id-kp-updateSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of software or firmware update packages. Update packages are used to install new software or firmware updates on potentially safety-critical systems. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of software or firmware update packages. Update packages are used to install software (including firmware, safety-related applications and others) on systems. The KU extension is set to digitalSignature or nonRepudiation.
 
 * id-kp-safetyCommunication
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS. Depending on the key type used, the KU is set to digitalSignature or keyEncipherment.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols. Depending on the key type used, the KU is set to digitalSignature or keyEncipherment.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::=
