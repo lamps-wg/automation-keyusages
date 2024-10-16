@@ -33,13 +33,13 @@ author:
   email: hendrik.brockhaus@siemens.com
   uri: https://www.siemens.com
 - name: Dr. David Goltzsche
-  org: Siemens Mobility GmbH
+  org: Siemens Mobility
   street: Ackerstraße 22
   code: '38126'
   city: Braunschweig
   country: Germany
   email: david.goltzsche@siemens.com
-  uri: https://www.siemens.com
+  uri: https://www.mobility.siemens.com
 
 normative:
   RFC2119:
