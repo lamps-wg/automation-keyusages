@@ -10,11 +10,12 @@ pi:
   tocdepth: '3'
   symrefs: 'true'
   sortrefs: 'false'
-title: X.509 Certificate Extended Key Usage (EKU) for ERJU System Pillar
-abbrev: EKU for ERJU System Pillar
+title: X.509 Certificate Extended Key Usage (EKU) for Automation
+abbrev: EKU for Automation
 area: sec
 wg: LAMPS Working Group
 keyword:
+- Automation
 - ERJU
 - extended key usage
 - extension
@@ -87,19 +88,47 @@ informative:
     author:
     - org: Europe's Rail Joint Undertaking
     date: '2024-09-23'
-
+  EU-CRA :
+    target: https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
+    title: ' PROPOSAL FOR A REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal cybersecurity requirements for products with digital elements and 
+    amending Regulation (EU) 2019/1020'
+    author: 
+    - org: European Commission
+    date: '2022-09-15'
+  EUSTRATEGY:
+    target: https://digital-strategy.ec.europa.eu/en/library/eus-cybersecurity-strategy-digital-decade-0
+    title: 'The EU's Cybersecurity Strategy for the Digital Decade'
+    author:
+    - org: European Commission
+    date: '2020-12-16'
+  NIS2 : 
+    target: https://digital-strategy.ec.europa.eu/en/policies/nis2-directive
+    title: 'Directive (EU) 2022/2555 of the European Parliament and of the Council'
+    author:
+    - org: European Commission
+    date: '2024-12-14' 
+  IEC 62443 4-2:
+  IEC 62443 3-3: 
 --- abstract
 
 
-RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for X.509 certificates. This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates used by the ERJU System Pillar.
+RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for X.509 certificates. This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates used by Automation and the ERJU System Pillar.
 
 --- middle
 
 # Introduction {#Intro}
 
+Automation hardware and software products will strategically be more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy. <br>
+Automation products connected to the internet would bear the CE marking to indicate they comply.
+Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EUSTRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [NIS2 Directive](#NIS2) : Directive on measures for a high common level of cybersecurity across the Union. <br>
+2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the IEC 62443-4-2 Security for industrial automation and control systems –
+Part 4-2: Technical security requirements for IACS components and the IEC 62443-3-3 Industrial communication networks – Network and system security –
+Part 3-3: System security requirements and security levels. <br>
+Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build a typical automation solution. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration and secure safety communication. <br>  
+
 The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements. The deliverables include due consideration of cyber-security aspects, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
-The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
+ The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
 
 * Validating signatures of general-purpose software configuration files.
 
@@ -119,7 +148,7 @@ This document addresses the above problems by defining the EKU extension of X.50
 
 Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using or misusing KeyPurposeIds outside of their intended vendor-controlled environment can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various implementations.
 
-Although the specification focuses on the the use within ERJU documents, the standard KeyPurposeIds defined in this document can be used in other deployments.
+Although the specification focuses on the the use within Automation and ERJU documents, the standard KeyPurposeIds defined in this document can be used in other deployments.
 
 
 # Conventions and Definitions {#conventions}
@@ -127,7 +156,7 @@ Although the specification focuses on the the use within ERJU documents, the sta
 {::boilerplate bcp14-tagged}
 
 
-# Extended Key Purpose for ERJU System Pillar {#EKU}
+# Extended Key Purpose for Automation #EKU}
 
 This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, or signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
 
@@ -148,7 +177,7 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-configSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files (for example XML or JSON files). Configuration files are used to configure software. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files in any size and input format (for example XML,YAML or JSON files). Configuration files are used to configure hardware and software. The KU extension is set to digitalSignature or nonRepudiation.
 
 * id-kp-trustanchorSigning
 
@@ -156,11 +185,11 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-updateSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of software or firmware update packages. Update packages are used to install software (including firmware, safety-related applications and others) on systems. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications and others) on systems. The KU extension is set to digitalSignature or nonRepudiation.
 
 * id-kp-safetyCommunication
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols. Depending on the key type used, the KU is set to digitalSignature or keyEncipherment.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols. Depending on the key type used, the KU is set to digitalSignature or keyEncipherment or keyAgreement.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::=
