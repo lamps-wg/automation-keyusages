@@ -167,7 +167,7 @@ Although the specification focuses on the the use within Automation, the standar
 {::boilerplate bcp14-tagged}
 
 
-# Extended Key Purpose for Automation #EKU}
+# Extended Key Purpose for Automation {#EKU}
 
 This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, or signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
 
@@ -188,19 +188,19 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-configSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files in any size and input format (for example XML,YAML or JSON files). Configuration files are used to configure hardware and software. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files in any size and input format (for example XML, YAML, JSON). Configuration files are used to configure hardware and software. The KU bits that may be consistent are digitalSignature or nonRepudiation.
 
 * id-kp-trustanchorSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files. Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files. Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device. The KU bits that may be consistent are digitalSignature or nonRepudiation.
 
 * id-kp-updateSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications and others) on systems. The KU extension is set to digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications and others) on systems. The KU bits that may be consistent are digitalSignature or nonRepudiation.
 
 * id-kp-safetyCommunication
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols. Depending on the key type used, the KU is set to digitalSignature or keyEncipherment or keyAgreement.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols. Depending on the key type used, the KU bits that may be consistent are digitalSignature and/or (keyEncipherment or keyAgreement).
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::=
