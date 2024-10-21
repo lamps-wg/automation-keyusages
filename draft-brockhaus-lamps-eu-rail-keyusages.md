@@ -80,35 +80,49 @@ informative:
     target: https://eur-lex.europa.eu/eli/dir/2016/797/2020-05-28
     title: 'Directive 2016/797 - Interoperability of the rail system within the EU'
     author:
-    - org: European Parliament, Council of the European Union
+      org: European Parliament, Council of the European Union
     date: '2020-05-28'
   ERJU:
     target: https://rail-research.europa.eu/wp-content/uploads/2023/10/ERJU_SP_CyberSecurity_Review3_Files.zip
     title: 'SP-Cybersecurity-SharedCybersecurityServices - Review 3 Final Draft Specs (V0.90)'
     author:
-    - org: Europe's Rail Joint Undertaking
+      org: Europe's Rail Joint Undertaking
     date: '2024-09-23'
   EU-CRA :
     target: https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
-    title: ' PROPOSAL FOR A REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal cybersecurity requirements for products with digital elements and 
-    amending Regulation (EU) 2019/1020'
+    title: 'Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal cybersecurity requirements for products with digital elements and amending Regulation (EU) 2019/1020'
     author: 
-    - org: European Commission
+      org: European Commission
     date: '2022-09-15'
-  EUSTRATEGY:
+  EU-STRATEGY: 
     target: https://digital-strategy.ec.europa.eu/en/library/eus-cybersecurity-strategy-digital-decade-0
-    title: 'The EU's Cybersecurity Strategy for the Digital Decade'
+    title: 'The EU´s Cybersecurity Strategy for the Digital Decade'
     author:
-    - org: European Commission
-    date: '2020-12-16'
-  NIS2 : 
+      org: European Commission
+    date: '2020-12-16' 
+  NIS2: 
     target: https://digital-strategy.ec.europa.eu/en/policies/nis2-directive
     title: 'Directive (EU) 2022/2555 of the European Parliament and of the Council'
     author:
-    - org: European Commission
+      org: European Commission
     date: '2024-12-14' 
-  IEC 62443 4-2:
-  IEC 62443 3-3: 
+  IEC.62443-4-2:
+    target: https://webstore.iec.ch/publication/34421
+    title: 'Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components'
+    author:
+      org: IEC
+    date: '2019-02-27'
+    seriesinfo:
+      IEC 62443-4-2:2019
+  IEC.62443-3-3: 
+    target: https://webstore.iec.ch/publication/7033
+    title: 'Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels'
+    author:
+      org: IEC
+    date: '2013-08-07'
+    seriesinfo:
+      IEC 62443-3-3:2013
+
 --- abstract
 
 
@@ -118,17 +132,14 @@ RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for 
 
 # Introduction {#Intro}
 
-Automation hardware and software products will strategically be more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy. <br>
+Automation hardware and software products will strategically be more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
 Automation products connected to the internet would bear the CE marking to indicate they comply.
-Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EUSTRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [NIS2 Directive](#NIS2) : Directive on measures for a high common level of cybersecurity across the Union. <br>
-2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the IEC 62443-4-2 Security for industrial automation and control systems –
-Part 4-2: Technical security requirements for IACS components and the IEC 62443-3-3 Industrial communication networks – Network and system security –
-Part 3-3: System security requirements and security levels. <br>
-Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build a typical automation solution. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration and secure safety communication. <br>  
+Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
+2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems – Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) and the [Industrial communication networks – Network and system security – Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build a typical automation solution. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration and secure safety communication.  
 
-The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements. The deliverables include due consideration of cyber-security aspects, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
+As a concrete example, the [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements. The deliverables include due consideration of cyber-security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
- The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
+The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
 
 * Validating signatures of general-purpose software configuration files.
 
@@ -148,7 +159,7 @@ This document addresses the above problems by defining the EKU extension of X.50
 
 Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using or misusing KeyPurposeIds outside of their intended vendor-controlled environment can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various implementations.
 
-Although the specification focuses on the the use within Automation and ERJU documents, the standard KeyPurposeIds defined in this document can be used in other deployments.
+Although the specification focuses on the the use within Automation, the standard KeyPurposeIds defined in this document can be used in other deployments.
 
 
 # Conventions and Definitions {#conventions}
@@ -261,8 +272,8 @@ The following module adheres to ASN.1 specifications {{X.680}} and
 
 EU-Rail-EKU
   { iso(1) identified-organization(3) dod(6) internet(1)
-  security(5) mechanisms(5) pkix(7) id-mod(0)
-  id-mod-eu-rail-eku (TBD1) }
+    security(5) mechanisms(5) pkix(7) id-mod(0)
+    id-mod-eu-rail-eku (TBD1) }
 
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
@@ -292,6 +303,13 @@ END
 [RFC Editor: Please remove this appendix in the release version of the document.]
 
 
+Version 01:
+
+* Broadened the scope to general automation use case and use ERJU as an example.
+
+* Fixed some nits reported.
+
+
 Version 00:
 
-Initial version of the document following best practices from RFC 9336 and RFC 9509
+* Initial version of the document following best practices from RFC 9336 and RFC 9509
