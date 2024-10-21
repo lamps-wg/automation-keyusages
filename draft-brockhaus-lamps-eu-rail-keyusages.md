@@ -41,6 +41,16 @@ author:
   country: Germany
   email: david.goltzsche@siemens.com
   uri: https://www.mobility.siemens.com
+contributor:
+- name: Szofia Fazekas-Zisch
+  org: Siemens AG Digital Industries Factory Automation
+  abbrev: Siemens
+  street: Breslauer Str. 5
+  code: '90766'
+  city: Fuerth
+  country: Germany
+  email: szofia.fazekas-zisch@siemens.com
+  uri: https://www.siemens.com
 
 normative:
   RFC2119:
@@ -137,7 +147,7 @@ Automation products connected to the internet would bear the CE marking to indic
 Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
 2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems – Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) and the [Industrial communication networks – Network and system security – Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build a typical automation solution. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration and secure safety communication.  
 
-As a concrete example, the [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements. The deliverables include due consideration of cyber-security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
+A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements for Rail Automation. The deliverables include due consideration of cyber-security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
 The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
 
@@ -187,19 +197,19 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-configSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files of various formats (for example XML, YAML or JSON). Configuration files are used to configure hardware or software. The KU bits that may be consistent are digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files of various formats (for example XML, YAML or JSON). Configuration files are used to configure hardware or software.
 
 * id-kp-trustanchorSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML or JSON). Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device. The KU bits that may be consistent are digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML or JSON). Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device.
 
 * id-kp-updateSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications and others) on systems. The KU bits that may be consistent are digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications and others) on systems.
 
 * id-kp-safetyCommunication
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols. Depending on the key type used, the KU bits that may be consistent are digitalSignature and/or (keyEncipherment or keyAgreement).
+> A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols.
 
 ~~~
 id-kp  OBJECT IDENTIFIER  ::=
