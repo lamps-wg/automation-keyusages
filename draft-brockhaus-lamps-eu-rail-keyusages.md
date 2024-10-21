@@ -161,7 +161,6 @@ Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group
 
 Although the specification focuses on the the use within Automation, the standard KeyPurposeIds defined in this document can be used in other deployments.
 
-
 # Conventions and Definitions {#conventions}
 
 {::boilerplate bcp14-tagged}
@@ -188,11 +187,11 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-configSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files in any size and input format (for example XML, YAML, JSON). Configuration files are used to configure hardware and software. The KU bits that may be consistent are digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files of various formats (for example XML, YAML or JSON). Configuration files are used to configure hardware or software. The KU bits that may be consistent are digitalSignature or nonRepudiation.
 
 * id-kp-trustanchorSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files. Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device. The KU bits that may be consistent are digitalSignature or nonRepudiation.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML or JSON). Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device. The KU bits that may be consistent are digitalSignature or nonRepudiation.
 
 * id-kp-updateSigning
 
