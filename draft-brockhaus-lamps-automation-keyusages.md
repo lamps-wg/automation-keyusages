@@ -1,6 +1,6 @@
 ---
 v: 3
-docname: draft-brockhaus-lamps-eu-rail-keyusages-latest
+docname: draft-brockhaus-lamps-automation-keyusages-latest
 cat: std
 consensus: 'true'
 submissiontype: IETF
@@ -21,8 +21,6 @@ keyword:
 - extension
 - PKI
 date: 2024
-github: "HBrock/eu-rail-keyusages"
-latest: "https://HBrock.github.io/eu-rail-keyusages/draft-brockhaus-lamps-eu-rail-keyusages.html"
 author:
 - name: Hendrik Brockhaus
   org: Siemens
@@ -118,7 +116,7 @@ informative:
     date: '2022-09-15'
   EU-STRATEGY: 
     target: https://digital-strategy.ec.europa.eu/en/library/eus-cybersecurity-strategy-digital-decade-0
-    title: 'The EU´s Cybersecurity Strategy for the Digital Decade'
+    title: "The EU's Cybersecurity Strategy for the Digital Decade"
     author:
       org: European Commission
     date: '2020-12-16' 
@@ -324,13 +322,13 @@ END
 [RFC Editor: Please remove this appendix in the release version of the document.]
 
 
-Version 01:
+draft-brockhaus-lamps-automation-keyusages version 00:
 
 * Broadened the scope to general automation use case and use ERJU as an example.
 
 * Fixed some nits reported.
 
 
-Version 00:
+draft-brockhaus-lamps-eu-rail-keyusages version 00:
 
 * Initial version of the document following best practices from RFC 9336 and RFC 9509
