@@ -51,6 +51,18 @@ contributor:
   country: Germany
   email: szofia.fazekas-zisch@siemens.com
   uri: https://www.siemens.com
+- name: Baptiste Fouques
+  org: Alstom
+  email: baptiste.fouques@alstomgroup.com
+- name: Daniel Gutierrez Orta
+  org: CAF Signalling
+  email: daniel.gutierrez@cafsignalling.com
+- name: Martin Weller
+  org: Hitachi Rail
+  email: martin.weller@urbanandmainlines.com
+- name: Nicolas Poyet
+  org: SNCF
+  email: nicolas.poyet@sncf.fr
 
 normative:
   RFC2119:
