@@ -111,21 +111,21 @@ informative:
   EU-CRA :
     target: https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
     title: 'Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal cybersecurity requirements for products with digital elements and amending Regulation (EU) 2019/1020'
-    author: 
+    author:
       org: European Commission
     date: '2022-09-15'
-  EU-STRATEGY: 
+  EU-STRATEGY:
     target: https://digital-strategy.ec.europa.eu/en/library/eus-cybersecurity-strategy-digital-decade-0
     title: "The EU's Cybersecurity Strategy for the Digital Decade"
     author:
       org: European Commission
-    date: '2020-12-16' 
-  NIS2: 
+    date: '2020-12-16'
+  NIS2:
     target: https://digital-strategy.ec.europa.eu/en/policies/nis2-directive
     title: 'Directive (EU) 2022/2555 of the European Parliament and of the Council'
     author:
       org: European Commission
-    date: '2024-12-14' 
+    date: '2024-12-14'
   IEC.62443-4-2:
     target: https://webstore.iec.ch/publication/34421
     title: 'Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components'
@@ -134,7 +134,7 @@ informative:
     date: '2019-02-27'
     seriesinfo:
       IEC 62443-4-2:2019
-  IEC.62443-3-3: 
+  IEC.62443-3-3:
     target: https://webstore.iec.ch/publication/7033
     title: 'Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels'
     author:
