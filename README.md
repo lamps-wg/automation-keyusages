@@ -12,7 +12,7 @@ This is an individual submission that is supposed to be submitted to IETF [LAMPS
 
 ## Contributing
 
-See the
+See 
 [guidelines for contributions](https://github.com/HBrock/eu-rail-keyusages/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
