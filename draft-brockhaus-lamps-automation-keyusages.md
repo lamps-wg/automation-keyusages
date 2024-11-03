@@ -211,7 +211,8 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-trustanchorSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML or JSON). Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML or JSON).
+> Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device.
 
 * id-kp-updateSigning
 
