@@ -4,10 +4,10 @@ This is an individual submission that is supposed to be submitted to IETF [LAMPS
 
 ## X.509 Certificate Extended Key Usage (EKU) for ERJU System Pillar
 
-* [Editor's Copy](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-eu-rail-keyusages.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-brockhaus-lamps-eu-rail-keyusages)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-brockhaus-lamps-eu-rail-keyusages)
-* [Compare Editor's Copy to Working Group Draft](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-eu-rail-keyusages.diff)
+* [Editor's Copy](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-automation-keyusages.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-brockhaus-lamps-automation-keyusages)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-brockhaus-lamps-automation-keyusages)
+* [Compare Editor's Copy to Working Group Draft](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-automation-keyusages.diff)
 
 
 ## Contributing
