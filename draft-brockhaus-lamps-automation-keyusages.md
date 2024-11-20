@@ -179,7 +179,8 @@ This document addresses the above problems by defining the EKU extension of X.50
 
 Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using or misusing KeyPurposeIds outside of their intended vendor-controlled environment can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various implementations.
 
-Although the specification focuses on the the use within Automation, the standard KeyPurposeIds defined in this document can be used in other deployments.
+Although the specification focuses on the use within Automation, the definitions are intentionally broadly worded to allow the use of the KeyPurposeIds defined in this document MAY be used in other deployments. Whether and how one of the KeyPurpose OIDs defined in this document is used in a specific environment MUST be specified in the relevant standards.
+
 
 # Conventions and Definitions {#conventions}
 
@@ -321,6 +322,10 @@ END
 # History of Changes {#history}
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
+
+Changes from 00 -> 01:
+
+* Updated last paragraph of Section 1
 
 
 draft-brockhaus-lamps-automation-keyusages version 00:
