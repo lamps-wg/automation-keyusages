@@ -257,9 +257,9 @@ IANA is also requested to register the following ASN.1 {{X.680}}
 module OID in the "SMI Security for PKIX Module Identifier" registry
 (1.3.6.1.5.5.7.0). This OID is defined in {{asn1}}.
 
-| Decimal | Description         | References |
-|:--------|:--------------------|:-----------|
-| TBD1    | id-mod-eu-rail-eku  | This-RFC   |
+| Decimal | Description            | References |
+|:--------|:-----------------------|:-----------|
+| TBD1    | id-mod-automation-eku  | This-RFC   |
 
 
 IANA is requested to register the following OIDs in the "SMI Security
@@ -291,10 +291,10 @@ The following module adheres to ASN.1 specifications {{X.680}} and
 ~~~ asn1
 <CODE BEGINS>
 
-EU-Rail-EKU
+Automation-EKU
   { iso(1) identified-organization(3) dod(6) internet(1)
     security(5) mechanisms(5) pkix(7) id-mod(0)
-    id-mod-eu-rail-eku (TBD1) }
+    id-mod-eu-automation-eku (TBD1) }
 
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
