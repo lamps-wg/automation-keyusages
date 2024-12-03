@@ -15,7 +15,7 @@ abbrev: EKU for Automation
 area: sec
 wg: LAMPS Working Group
 keyword:
-- Automation
+- Industrial Automation
 - ERJU
 - extended key usage
 - extension
@@ -146,7 +146,7 @@ informative:
 --- abstract
 
 
-RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for X.509 certificates. This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates used by Automation and the ERJU System Pillar.
+RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for X.509 certificates. This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates used by industrial automation and the ERJU System Pillar.
 
 --- middle
 
