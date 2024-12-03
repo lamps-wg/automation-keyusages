@@ -179,7 +179,7 @@ This document addresses the above problems by defining the EKU extension of X.50
 
 Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using or misusing KeyPurposeIds outside of their intended vendor-controlled environment can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various implementations.
 
-Although the specification focuses on the use within Automation, the definitions are intentionally broadly worded to allow the use of the KeyPurposeIds defined in this document MAY be used in other deployments. Whether and how one of the KeyPurpose OIDs defined in this document is used in a specific environment MUST be specified in the relevant standards.
+Although the specification focuses on use in industrial automation, the definitions are intentionally broad to allow the use of the KeyPurposeIds defined in this document in other deployments as well. Whether and how any of the KeyPurpose OIDs defined in this document are used in a particular environment MUST be specified in the relevant standards.
 
 
 # Conventions and Definitions {#conventions}
