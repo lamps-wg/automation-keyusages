@@ -101,7 +101,7 @@ Table of Contents
    standards such as the Security for industrial automation and control
    systems - Part 4-2: Technical security requirements for IACS
    components [IEC.62443-4-2] and the Industrial communication networks
-   - Network and system security – Part 3-3: System security
+   - Network and system security - Part 3-3: System security
    requirements and security levels [IEC.62443-3-3].  Automation
    hardware and software products of diverse vendors that are connected
    on automation networks and the internet build a typical automation
