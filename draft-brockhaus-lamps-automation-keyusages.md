@@ -326,7 +326,9 @@ END
 
 Changes from 00 -> 01:
 
-* Updated last paragraph of Section 1
+* Updated last paragraph of Section 1 addressing WG adoption comments by Rich and Russ
+
+* Updated name and OID of ASN.1 module
 
 
 draft-brockhaus-lamps-automation-keyusages version 00:
