@@ -155,11 +155,11 @@ RFC 5280 specifies several extended key purpose identifiers (KeyPurposeIds) for 
 Automation hardware and software products will strategically be more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
 Automation products connected to the internet would bear the CE marking to indicate they comply.
 Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
-2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build a typical automation solution. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration and secure safety communication.
+2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build a typical automation solution. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration, and secure safety communication.
 
-A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe and secure system architecture alongside with system requirements for Rail Automation. The deliverables include due consideration of cyber-security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
+A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe, and secure system architecture alongside with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
-The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
+The ERJU System Pillar Cyber Security Working Group makes use of PKIs to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:
 
 * Validating signatures of general-purpose software configuration files.
 
@@ -169,15 +169,15 @@ The ERJU System Pillar Cyber Security Working Group makes use of an internal PKI
 
 * Authenticating communication endpoints authorized for safety-critical communication.
 
-{{RFC5280}} specifies several key usage extensions, defined via KeyPurposeIds, for X.509 certificates. Key usage extensions added to a certificate are meant to express intent as to the purpose of the named usage, for humans and for complying libraries. In addition, the IANA registry "SMI Security for PKIX Extended Key Purpose" {{RFC7299}} contains additional KeyPurposeIds. The use of the anyExtendedKeyUsage KeyPurposeId, as defined in {{Section 4.2.1.12 of RFC5280}}, is generally considered a poor practice. This is especially true for certificates, whether they are multi-purpose or single-purpose, within the context of EURJU System Pillar.
+{{RFC5280}} specifies several key usage extensions, defined via KeyPurposeIds, for X.509 certificates. Key usage extensions added to a certificate are meant to express intent as to the purpose of the named usage, for humans and for complying libraries. In addition, the IANA registry "SMI Security for PKIX Extended Key Purpose" {{RFC7299}} contains additional KeyPurposeIds. The use of the anyExtendedKeyUsage KeyPurposeId, as defined in {{Section 4.2.1.12 of RFC5280}}, is generally considered a poor practice. This is especially true for certificates, whether they are multi-purpose or single-purpose, within the context of ERJU System Pillar.
 
-If the purpose of the issued certificates is not restricted, i.e., the type of operations for which a public key contained in the certificate can be used are not specified, those certificates could be used for another purpose than intended, increasing the risk of cross-protocol attacks. Failure to ensure proper segregation of duties means that an application or system that generates the public/private keys and applies for a certificate to the operator certification authority could obtain a certificate that can be misused for tasks that this application or system is not entitled to perform. For example, management of trust anchor is a particularly critical task. A device could potentially accept a trust anchor configuration file signed by a service that uses a certificate with no EKU or with the is KeyPurposeId id-kp-codeSigning ({{Section 4.2.1.12 of RFC5280}}) or id-kp-documentSigning {{RFC9336}}. A device should only accept trust anchor configuration files if the file is signed with a certificate that has been explicitly issued for this purpose.
+If the purpose of the issued certificates is not restricted, i.e., the type of operations for which a public key contained in the certificate can be used are not specified, those certificates could be used for another purpose than intended, increasing the risk of cross-protocol attacks. Failure to ensure proper segregation of duties means that an application or system that generates the public/private keys and applies for a certificate to the operator certification authority could obtain a certificate that can be misused for tasks that this application or system is not entitled to perform. For example, management of trust anchor is a particularly critical task. A device could potentially accept a trust anchor configuration file signed by a service that uses a certificate with no EKU or with the KeyPurposeId id-kp-codeSigning ({{Section 4.2.1.12 of RFC5280}}) or id-kp-documentSigning {{RFC9336}}. A device should only accept trust anchor configuration files if the file is signed with a certificate that has been explicitly issued for this purpose.
 
-The KeyPurposeId id-kp-serverAuth ({{Section 4.2.1.12 of RFC5280}}) can be used to identify that the certificate is for a TLS server, and the KeyPurposeId id-kp-clientAuth ({{Section 4.2.1.12 of RFC5280}}) can be used to identify that the certificate is for a TLS client. However, there are currently no KeyPurposeIds for usage with X.509 certificates in EURJU documents for safety-critical communication.
+The KeyPurposeId id-kp-serverAuth ({{Section 4.2.1.12 of RFC5280}}) can be used to identify that the certificate is for a TLS WWW server, and the KeyPurposeId id-kp-clientAuth ({{Section 4.2.1.12 of RFC5280}}) can be used to identify that the certificate is for a TLS WWW client. However, there are currently no KeyPurposeIds for usage with X.509 certificates for safety-critical communication.
 
-This document addresses the above problems by defining the EKU extension of X.509 public key certificates. Certificates are either used for signing files (general-purpose configuration and trust anchor configuration files, software and firmware update packages) or are used for safety-critical communication.
+This document addresses the above problems by defining keyPurposeIds for the EKU extension of X.509 public key certificates. These certificates are either used for signing files (general-purpose configuration and trust anchor configuration files, software and firmware update packages) or are used for safety-critical communication.
 
-Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using or misusing KeyPurposeIds outside of their intended vendor-controlled environment can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various implementations.
+Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using or misusing KeyPurposeIds outside of their intended vendor-controlled environment can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various vendors and industries.
 
 Although the specification focuses on use in industrial automation, the definitions are intentionally broad to allow the use of the KeyPurposeIds defined in this document in other deployments as well. Whether and how any of the KeyPurpose OIDs defined in this document must be described in more detail in the technical standards and certificate policies relevant to the application domain.
 
@@ -190,9 +190,9 @@ Although the specification focuses on use in industrial automation, the definiti
 
 # Extended Key Purpose for Automation {#EKU}
 
-This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, or signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
+This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
 
-Systems or applications that verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication SHOULD require that corresponding KeyPurposeIds be specified by the EKU extension. If the certificate requester knows the certificate users are mandated to use these KeyPurposeIds, it MUST enforce their inclusion. Additionally, such a certificate requester MUST ensure that the KeyUsage extension be set to digitalSignature or nonRepudiation (also designated as contentCommitment) for signature verification and/or to keyEncipherment for secret key encryption.
+Systems or applications that verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication SHOULD require that corresponding KeyPurposeIds be specified by the EKU extension. If the certificate requester knows the certificate users are mandated to use these KeyPurposeIds, it MUST enforce their inclusion. Additionally, such a certificate requester MUST ensure that the KeyUsage extension be set to digitalSignature or nonRepudiation (also designated as contentCommitment) for signature verification and if needed to keyEncipherment for secret key encryption and/or keyAgreement for key agreement.
 
 
 # Including the Extended Key Purpose in Certificates {#include-EKU}
@@ -200,39 +200,39 @@ Systems or applications that verify the signature of a general-purpose or trust 
 {{RFC5280}} specifies the EKU X.509 certificate extension for use on end entity certificates. The extension indicates one or more purposes for which the certified public key is valid. The EKU extension can be used in conjunction with the Key Usage (KU) extension, which indicates the set of basic cryptographic operations for which the certified key may be used. The EKU extension syntax is repeated here for convenience:
 
 ~~~
-ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
+   ExtKeyUsageSyntax  ::=  SEQUENCE SIZE (1..MAX) OF KeyPurposeId
 
-KeyPurposeId  ::=  OBJECT IDENTIFIER
+   KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
 
 As described in {{RFC5280}}, the EKU extension may, at the option of the certificate issuer, be either critical or non-critical. The inclusion of KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication in a certificate indicates that the public key encoded in the certificate has been certified for the following usages:
 
 * id-kp-configSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files of various formats (for example XML, YAML or JSON). Configuration files are used to configure hardware or software.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-configSigning may be used for verifying signatures of general-purpose configuration files of various formats (for example XML, YAML, or JSON). Configuration files are used to configure hardware or software.
 
 * id-kp-trustanchorSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML or JSON).
+> A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML, or JSON).
 > Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device.
 
 * id-kp-updateSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications and others) on systems.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications, and others) on systems.
 
 * id-kp-safetyCommunication
 
 > A public key contained in a certificate containing the KeyPurposeId id-kp-safetyCommunication may be used to authenticate a communication peer for safety-critical communication based on TLS or other protocols.
 
 ~~~
-id-kp  OBJECT IDENTIFIER  ::=
-    { iso(1) identified-organization(3) dod(6) internet(1)
-      security(5) mechanisms(5) pkix(7) 3 }
+   id-kp  OBJECT IDENTIFIER  ::=
+       { iso(1) identified-organization(3) dod(6) internet(1)
+         security(5) mechanisms(5) pkix(7) 3 }
 
-id-kp-configSigning        OBJECT IDENTIFIER ::= { id-kp TBD2 }
-id-kp-trustanchorSigning   OBJECT IDENTIFIER ::= { id-kp TBD3 }
-id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 }
-id-kp-safetyCommunication  OBJECT IDENTIFIER ::= { id-kp TBD5 }
+   id-kp-configSigning        OBJECT IDENTIFIER ::= { id-kp TBD2 }
+   id-kp-trustanchorSigning   OBJECT IDENTIFIER ::= { id-kp TBD3 }
+   id-kp-updateSigning        OBJECT IDENTIFIER ::= { id-kp TBD4 }
+   id-kp-safetyCommunication  OBJECT IDENTIFIER ::= { id-kp TBD5 }
 ~~~
 
 
@@ -243,7 +243,7 @@ The procedures and practices employed by a certification authority MUST ensure t
 
 # Security Considerations {#security}
 
-The Security Considerations of {{RFC5280}} are applicable to this document. This extended key purpose does not introduce new security risks but instead reduces existing security risks by providing the means to identify if the certificate is generated to verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication.
+The Security Considerations of {{RFC5280}} are applicable to this document. These extended key usage key purposes do not introduce new security risks but instead reduces existing security risks by providing the means to identify if the certificate is generated to verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication.
 
 To reduce the risk of specific cross-protocol attacks, the relying party or the relying party software may additionally prohibit use of specific combinations of KeyPurposeIds. The procedure for allowing or disallowing combinations of KeyPurposeIds using Excluded KeyPurposeId and Permitted KeyPurposeId, as carried out by a relying party, is defined in {{Section 4 of RFC9336}}. Examples of Excluded KeyPurposeIds include the presence of the anyExtendedKeyUsage KeyPurposeId or the complete absence of the EKU extension in a certificate. Examples of Permitted KeyPurposeIds include the presence of id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication KeyPurposeIds.
 
@@ -254,18 +254,14 @@ In some security protocols, such as [TLS 1.2](#RFC5246), certificates are exchan
 
 # IANA Considerations {#iana}
 
-IANA is also requested to register the following ASN.1 {{X.680}}
-module OID in the "SMI Security for PKIX Module Identifier" registry
-(1.3.6.1.5.5.7.0). This OID is defined in {{asn1}}.
+IANA is requested to register the following ASN.1 {{X.680}} module OID in the "SMI Security for PKIX Module Identifier" registry (1.3.6.1.5.5.7.0). This OID is defined in {{asn1}}.
 
 | Decimal | Description            | References |
 |:--------|:-----------------------|:-----------|
 | TBD1    | id-mod-automation-eku  | This-RFC   |
 
 
-IANA is requested to register the following OIDs in the "SMI Security
-for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).  These
-OIDs are defined in {{include-EKU}}.
+IANA is also requested to register the following OIDs in the "SMI Security for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).  These OIDs are defined in {{include-EKU}}.
 
 | Decimal | Description                | References |
 |:--------|:---------------------------|:-----------|
@@ -323,6 +319,16 @@ END
 # History of Changes {#history}
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
+
+Changes from 00 -> 01:
+
+* Fixed some minor nids and wording issues
+
+
+draft-ietf-lamps-automation-keyusages version 00:
+
+* Updated document and filename after WG adoption
+
 
 Changes from 00 -> 01:
 
