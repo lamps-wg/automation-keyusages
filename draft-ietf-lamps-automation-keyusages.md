@@ -1,6 +1,6 @@
 ---
 v: 3
-docname: draft-brockhaus-lamps-automation-keyusages-latest
+docname: draft-ietf-lamps-automation-keyusages-latest
 cat: std
 consensus: 'true'
 submissiontype: IETF
