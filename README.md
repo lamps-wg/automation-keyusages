@@ -4,16 +4,16 @@ This is an individual submission that is supposed to be submitted to IETF [LAMPS
 
 ## X.509 Certificate Extended Key Usage (EKU) for ERJU System Pillar
 
-* [Editor's Copy](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-automation-keyusages.html)
-* [Datatracker Page](https://datatracker.ietf.org/doc/draft-brockhaus-lamps-automation-keyusages)
-* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-brockhaus-lamps-automation-keyusages)
-* [Compare Editor's Copy to Working Group Draft](https://HBrock.github.io/eu-rail-keyusages/#go.draft-brockhaus-lamps-automation-keyusages.diff)
+* [Editor's Copy](https://lamps-wg.github.io/automation-keyusages/#go.draft-ietf-lamps-automation-keyusages.html)
+* [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-automation-keyusages)
+* [Working Group Draft](https://datatracker.ietf.org/doc/html/draft-ietf-lamps-automation-keyusages)
+* [Compare Editor's Copy to Working Group Draft](https://lamps-wg.github.io/automation-keyusages/#go.draft-ietf-lamps-automation-keyusages.diff)
 
 
 ## Contributing
 
 See 
-[guidelines for contributions](https://github.com/HBrock/eu-rail-keyusages/blob/main/CONTRIBUTING.md).
+[guidelines for contributions](https://github.com/lamps-wg/automation-keyusages/blob/main/CONTRIBUTING.md).
 
 Contributions can be made by creating pull requests.
 The GitHub interface supports creating pull requests using the Edit (✏) button.
