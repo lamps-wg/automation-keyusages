@@ -5,12 +5,12 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 19 June 2025                                   Siemens Mobility
-                                                        16 December 2024
+Expires: 21 June 2025                                   Siemens Mobility
+                                                        18 December 2024
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
-           draft-brockhaus-lamps-automation-keyusages-latest
+              draft-ietf-lamps-automation-keyusages-latest
 
 Abstract
 
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 19 June 2025.
+   This Internet-Draft will expire on 21 June 2025.
 
 Copyright Notice
 
