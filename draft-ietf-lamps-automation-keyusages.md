@@ -190,7 +190,9 @@ Although the specification focuses on use in industrial automation, the definiti
 
 # Extended Key Purpose for Automation {#EKU}
 
-This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
+This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present". The id-kp-safetyCommunication KeyPuposeId should not be asserted together with one of the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning or id-kp-updateSigning. Further consideration on prohibiting combinations of KeyPurposeIds is described in the Security Considerations section of this document.
+
+
 
 Systems or applications that verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication SHOULD require that corresponding KeyPurposeIds be specified by the EKU extension. If the certificate requester knows the certificate users are mandated to use these KeyPurposeIds, it MUST enforce their inclusion. Additionally, such a certificate requester MUST ensure that the KeyUsage extension be set to digitalSignature or nonRepudiation (also designated as contentCommitment) for signature verification and if needed to keyEncipherment for secret key encryption and/or keyAgreement for key agreement.
 
@@ -245,7 +247,7 @@ The procedures and practices employed by a certification authority MUST ensure t
 
 The Security Considerations of {{RFC5280}} are applicable to this document. These extended key usage key purposes do not introduce new security risks but instead reduces existing security risks by providing the means to identify if the certificate is generated to verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication.
 
-To reduce the risk of specific cross-protocol attacks, the relying party or the relying party software may additionally prohibit use of specific combinations of KeyPurposeIds. The procedure for allowing or disallowing combinations of KeyPurposeIds using Excluded KeyPurposeId and Permitted KeyPurposeId, as carried out by a relying party, is defined in {{Section 4 of RFC9336}}. Examples of Excluded KeyPurposeIds include the presence of the anyExtendedKeyUsage KeyPurposeId or the complete absence of the EKU extension in a certificate. Examples of Permitted KeyPurposeIds include the presence of id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication KeyPurposeIds.
+To reduce the risk of specific cross-protocol attacks, the relying party or the relying party software may additionally prohibit use of specific combinations of KeyPurposeIds.  The procedure for allowing or disallowing combinations of KeyPurposeIds using excluded KeyPurposeId and permitted KeyPurposeId, as carried out by a relying party, is defined in {{Section 4 of RFC9336}}.  The technical standards and certificate policies of the application domain should specify concrete requirements for excluded or permitted EKUs or their combinations. An example of excluded KeyPurposeIds can be the presence of the anyExtendedKeyUsage KeyPurposeId. Examples of allowed KeyPurposeIds combinations can be the presence of id-kp-safetyCommunication together with id-kp-clinetAuth or id-kp-serverAuth.
 
 # Privacy Considerations {#privacy}
 
@@ -319,6 +321,11 @@ END
 # History of Changes {#history}
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
+
+Changes from 01 -> 02:
+
+* Updates Sections 3 and 6 addressing Carl's last call comments (see "WG Last Call for draft-ietf-lamps-automation-keyusages-01")
+
 
 Changes from 00 -> 01:
 
