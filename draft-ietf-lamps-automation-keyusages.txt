@@ -215,7 +215,7 @@ Table of Contents
    intended purpose is present".  The id-kp-safetyCommunication
    KeyPuposeId should not be asserted together with one of the
    KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning or id-kp-
-   dateSigning.  Further consideration on prohibiting combinations of
+   updateSigning.  Further consideration on prohibiting combinations of
    KeyPurposeIds is described in the Security Considerations section of
    this document.
 
