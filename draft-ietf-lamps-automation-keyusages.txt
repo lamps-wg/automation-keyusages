@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 21 June 2025                                   Siemens Mobility
-                                                        18 December 2024
+Expires: 22 June 2025                                   Siemens Mobility
+                                                        19 December 2024
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 June 2025.
+   This Internet-Draft will expire on 22 June 2025.
 
 Copyright Notice
 
@@ -212,9 +212,12 @@ Table of Contents
    then the certificate MUST only be used for one of the purposes
    indicated" and "[i]f multiple [key] purposes are indicated the
    application need not recognize all purposes indicated, as long as the
-   intended purpose is present".  A consideration on prohibiting
-   combinations of KeyPurposeIds is described in the Security
-   Considerations section of this document.
+   intended purpose is present".  The id-kp-safetyCommunication
+   KeyPuposeId should not be asserted together with one of the
+   KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning or id-kp-
+   dateSigning.  Further consideration on prohibiting combinations of
+   KeyPurposeIds is described in the Security Considerations section of
+   this document.
 
    Systems or applications that verify the signature of a general-
    purpose or trust anchor configuration file, the signature of a
@@ -320,12 +323,10 @@ Table of Contents
    party, is defined in Section 4 of [RFC9336].  The technical standards
    and certificate policies of the application domain should specify
    concrete requirements for excluded or permitted EKUs or their
-   combinations.  Examples of excluded KeyPurposeIds can be the presence
-   of the anyExtendedKeyUsage KeyPurposeId or the presence of the id-kp-
-   safetyCommunication in combination with one of the KeyPurposeIds id-
-   kp-configSigning, id-kp-trustanchorSigning or id-kp-dateSigning.
-   Examples of allowed KeyPurposeIds combinations can be the presence of
-   id-kp-safetyCommunication together with id-kp-clinetAuth or id-kp-
+   combinations.  An example of excluded KeyPurposeIds can be the
+   presence of the anyExtendedKeyUsage KeyPurposeId.  Examples of
+   allowed KeyPurposeIds combinations can be the presence of id-kp-
+   safetyCommunication together with id-kp-clinetAuth or id-kp-
    serverAuth.
 
 7.  Privacy Considerations
