@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 22 June 2025                                   Siemens Mobility
-                                                        19 December 2024
+Expires: 24 June 2025                                   Siemens Mobility
+                                                        21 December 2024
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 June 2025.
+   This Internet-Draft will expire on 24 June 2025.
 
 Copyright Notice
 
@@ -212,10 +212,19 @@ Table of Contents
    then the certificate MUST only be used for one of the purposes
    indicated" and "[i]f multiple [key] purposes are indicated the
    application need not recognize all purposes indicated, as long as the
-   intended purpose is present".  The id-kp-safetyCommunication
-   KeyPuposeId should not be asserted together with one of the
-   KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning or id-kp-
-   updateSigning.  Further consideration on prohibiting combinations of
+   intended purpose is present".  None of the keyPurposeId's specified
+   in this document are intrinsically mutually exclusive.  Instead, the
+   acceptable combinations of those KeyPurposeId's with others in this
+   document and with other KeyPurposeId's specified elsewhere are left -
+   properly - to the relying parties in a particular operational use
+   domain.  For example, an application domain may specify 'the id-kp-
+   safetyCommunication KeyPuposeId SHOULD not be included in an issued
+   certificate together with one of the KeyPurposeId's id-kp-
+   configSigning, id-kp-trustanchorSigning, or id-kp-updateSigning, and
+   that a relying party in the association MUST ignore any of these
+   KeyPurposeId's if id-kp-safetyCommunication is one of the specified
+   key purposes in a certificate.'  Other domains may specify other
+   rules.  Further consideration on prohibiting combinations of
    KeyPurposeIds is described in the Security Considerations section of
    this document.
 
