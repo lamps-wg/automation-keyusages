@@ -217,7 +217,7 @@ Table of Contents
    acceptable combinations of those KeyPurposeId's with others in this
    document and with other KeyPurposeId's specified elsewhere are left -
    properly - to the relying parties in a particular operational use
-   domain.  For example, an application domain may specify 'the id-kp-
+   domain.  For example, an application domain may specify: 'The id-kp-
    safetyCommunication KeyPuposeId SHOULD not be included in an issued
    certificate together with one of the KeyPurposeId's id-kp-
    configSigning, id-kp-trustanchorSigning, or id-kp-updateSigning, and
