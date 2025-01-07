@@ -20,7 +20,7 @@ keyword:
 - extended key usage
 - extension
 - PKI
-date: 2024
+date: 2025
 author:
 - name: Hendrik Brockhaus
   org: Siemens
