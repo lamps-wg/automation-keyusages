@@ -334,7 +334,7 @@ Table of Contents
    or disallowing combinations of KeyPurposeIds using excluded
    KeyPurposeId and permitted KeyPurposeId, as carried out by a relying
    party, is defined in Section 4 of [RFC9336].  The technical standards
-   and certificate policies of the application domain should specify
+   and certificate policies of the area of application should specify
    concrete requirements for excluded or permitted EKUs or their
    combinations.  An example of excluded KeyPurposeIds can be the
    presence of the anyExtendedKeyUsage KeyPurposeId.  Examples of
