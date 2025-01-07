@@ -324,7 +324,7 @@ END
 
 Changes from 01 -> 02:
 
-* Updates Sections 3 and 6 addressing Carl's last call comments (see "WG Last Call for draft-ietf-lamps-automation-keyusages-01")
+* Updates Sections 3 and 6 addressing last call comments (see "WG Last Call for draft-ietf-lamps-automation-keyusages-01")
 
 Changes from 01 -> 02:
 
