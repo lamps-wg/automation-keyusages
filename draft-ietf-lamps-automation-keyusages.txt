@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 11 July 2025                                   Siemens Mobility
-                                                          7 January 2025
+Expires: 19 July 2025                                   Siemens Mobility
+                                                         15 January 2025
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 11 July 2025.
+   This Internet-Draft will expire on 19 July 2025.
 
 Copyright Notice
 
@@ -225,7 +225,7 @@ Table of Contents
    relying party MUST ignore the KeyPurposeId id-kp-trustanchorSigning
    if id-kp-safetyCommunication is one of the specified key purposes in
    a certificate.', and the certificate policy may specify: 'The id-kp-
-   safetyCommunication KeyPuposeId SHOULD not be included in an issued
+   safetyCommunication KeyPuposeId SHOULD NOT be included in an issued
    certificate together with the KeyPurposeId id-kp-trustanchorSigning.'
    Technical standards and certificate policies of other area of
    application may specify other rules.  Further consideration on
@@ -531,6 +531,10 @@ Appendix B.  History of Changes
 
    [RFC Editor: Please remove this appendix in the release version of
    the document.]
+
+   Changes from 02 -> 03:
+
+   *  Fixed some nits
 
    Changes from 01 -> 02:
 
