@@ -192,7 +192,7 @@ Although the specification focuses on use in industrial automation, the definiti
 
 This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
 
-None of the keyPurposeId's specified in this document are intrinsically mutually exclusive.  Instead, the acceptable combinations of those KeyPurposeId's with others specified in this document and with other KeyPurposeId's specified elsewhere are left to the technical standards of the respective area of application and the certificate policy of the respective PKI.  For example, a technical standard may specify: 'Different keys and certificate MUST be used for safety communication and for trust anchor updates, and a relying party MUST ignore the KeyPurposeId id-kp-trustanchorSigning if id-kp-safetyCommunication is one of the specified key purposes in a certificate.', and the certificate policy may specify: 'The id-kp-safetyCommunication KeyPuposeId SHOULD not be included in an issued certificate together with the KeyPurposeId id-kp-trustanchorSigning.' Technical standards and certificate policies of other area of application may specify other rules.  Further consideration on prohibiting combinations of KeyPurposeIds is described in the Security Considerations section of this document.
+None of the keyPurposeId's specified in this document are intrinsically mutually exclusive.  Instead, the acceptable combinations of those KeyPurposeId's with others specified in this document and with other KeyPurposeId's specified elsewhere are left to the technical standards of the respective area of application and the certificate policy of the respective PKI.  For example, a technical standard may specify: 'Different keys and certificate MUST be used for safety communication and for trust anchor updates, and a relying party MUST ignore the KeyPurposeId id-kp-trustanchorSigning if id-kp-safetyCommunication is one of the specified key purposes in a certificate.', and the certificate policy may specify: 'The id-kp-safetyCommunication KeyPuposeId SHOULD NOT be included in an issued certificate together with the KeyPurposeId id-kp-trustanchorSigning.' Technical standards and certificate policies of other area of application may specify other rules.  Further consideration on prohibiting combinations of KeyPurposeIds is described in the Security Considerations section of this document.
 
 Systems or applications that verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication SHOULD require that corresponding KeyPurposeIds be specified by the EKU extension. If the certificate requester knows the certificate users are mandated to use these KeyPurposeIds, it MUST enforce their inclusion. Additionally, such a certificate requester MUST ensure that the KeyUsage extension be set to digitalSignature or nonRepudiation (also designated as contentCommitment) for signature verification and if needed to keyEncipherment for secret key encryption and/or keyAgreement for key agreement.
 
@@ -322,9 +322,15 @@ END
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
 
+Changes from 02 -> 03:
+
+* Fixed some nits
+
+
 Changes from 01 -> 02:
 
 * Updates Sections 3 and 6 addressing last call comments (see "WG Last Call for draft-ietf-lamps-automation-keyusages-01")
+
 
 Changes from 01 -> 02:
 
