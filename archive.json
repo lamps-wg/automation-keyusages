@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-14T01:25:12.847626+00:00",
+  "timestamp": "2025-01-16T01:26:09.170763+00:00",
   "repo": "lamps-wg/automation-keyusages",
   "labels": [
     {
@@ -49,6 +49,94 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
-  "pulls": []
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDONBBKu86mJg_5",
+      "title": "Name change to id-kp-trustanchorconfigSigning",
+      "url": "https://github.com/lamps-wg/automation-keyusages/issues/1",
+      "state": "OPEN",
+      "author": "seanturner",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "To avoid people who don't read the RFCs, can we change `id-kp-trustanchorSigning` to `id-kp-trustanchorconfigSigning`.",
+      "createdAt": "2025-01-14T15:33:32Z",
+      "updatedAt": "2025-01-15T13:10:20Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I agree to this change, but propose a minor change improving readebility.\r\nChange `id-kp-trustanchorSigning` to `id-kp-trustAnchorConfigSigning`\r\n\r\nDoing this change, we could also implement the following change addressing a discussion from the WG Adoption.\r\nChange `id-kp-updateSigning` to `id-kp-updatePackageSigning`\r\n",
+          "createdAt": "2025-01-15T13:10:18Z",
+          "updatedAt": "2025-01-15T13:10:18Z"
+        }
+      ]
+    }
+  ],
+  "pulls": [
+    {
+      "number": 2,
+      "id": "PR_kwDONBBKu86HubmC",
+      "title": "Address #1",
+      "url": "https://github.com/lamps-wg/automation-keyusages/pull/2",
+      "state": "OPEN",
+      "author": "seanturner",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Closes #1",
+      "createdAt": "2025-01-14T15:36:52Z",
+      "updatedAt": "2025-01-15T13:10:59Z",
+      "baseRepository": "lamps-wg/automation-keyusages",
+      "baseRefName": "main",
+      "baseRefOid": "96aec78513cdceb32d319cb930f2acea03266a0d",
+      "headRepository": "lamps-wg/automation-keyusages",
+      "headRefName": "seanturner-issue1",
+      "headRefOid": "b4b6f203eb9cc1e3334e86c8a332498262d4eac7",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "dgoltzsche",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@HBrock I agree with @seanturner's proposal. From my point of view, we can accept this MR.",
+          "createdAt": "2025-01-15T07:26:05Z",
+          "updatedAt": "2025-01-15T07:26:05Z"
+        },
+        {
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "body": "see my proposal in #1 ",
+          "createdAt": "2025-01-15T13:10:57Z",
+          "updatedAt": "2025-01-15T13:10:57Z"
+        }
+      ],
+      "reviews": [
+        {
+          "id": "PRR_kwDONBBKu86X_-VG",
+          "commit": {
+            "abbreviatedOid": "be9ff57"
+          },
+          "author": "seanturner",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2025-01-14T15:37:14Z",
+          "updatedAt": "2025-01-14T15:37:15Z",
+          "comments": [
+            {
+              "originalPosition": 79,
+              "body": "```suggestion\r\nChanges from 02 -> 03:\r\n```",
+              "createdAt": "2025-01-14T15:37:15Z",
+              "updatedAt": "2025-01-14T15:37:15Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
