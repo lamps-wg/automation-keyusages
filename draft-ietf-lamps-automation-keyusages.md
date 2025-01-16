@@ -265,12 +265,12 @@ IANA is requested to register the following ASN.1 {{X.680}} module OID in the "S
 
 IANA is also requested to register the following OIDs in the "SMI Security for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).  These OIDs are defined in {{include-EKU}}.
 
-| Decimal | Description                | References |
-|:--------|:---------------------------|:-----------|
-| TBD2    | id-kp-configSigning        | This-RFC   |
-| TBD3    | id-kp-trustanchorConfigSigning   | This-RFC   |
-| TBD4    | id-kp-updatePackageSigning | This-RFC   |
-| TBD5    | id-kp-safetyCommunication  | This-RFC   |
+| Decimal | Description                    | References |
+|:--------|:-------------------------------|:-----------|
+| TBD2    | id-kp-configSigning            | This-RFC   |
+| TBD3    | id-kp-trustanchorConfigSigning | This-RFC   |
+| TBD4    | id-kp-updatePackageSigning     | This-RFC   |
+| TBD5    | id-kp-safetyCommunication      | This-RFC   |
 
 
 # Acknowledgments {#acknow}
