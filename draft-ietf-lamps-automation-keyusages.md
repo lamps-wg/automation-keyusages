@@ -190,7 +190,7 @@ Although the specification focuses on use in industrial automation, the definiti
 
 # Extended Key Purpose for Automation {#EKU}
 
-This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorconfigSigning, id-kp-updateSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
+This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustanchorconfigSigning, id-kp-updatePackageSigning, and id-kp-safetyCommunication and uses these, respectively, for: signing general-purpose or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
 
 None of the keyPurposeId's specified in this document are intrinsically mutually exclusive.  Instead, the acceptable combinations of those KeyPurposeId's with others specified in this document and with other KeyPurposeId's specified elsewhere are left to the technical standards of the respective area of application and the certificate policy of the respective PKI.  For example, a technical standard may specify: 'Different keys and certificate MUST be used for safety communication and for trust anchor updates, and a relying party MUST ignore the KeyPurposeId id-kp-trustanchorconfigSigning if id-kp-safetyCommunication is one of the specified key purposes in a certificate.', and the certificate policy may specify: 'The id-kp-safetyCommunication KeyPuposeId SHOULD not be included in an issued certificate together with the KeyPurposeId id-kp-trustanchorconfigSigning.' Technical standards and certificate policies of other area of application may specify other rules.  Further consideration on prohibiting combinations of KeyPurposeIds is described in the Security Considerations section of this document.
 
@@ -207,7 +207,7 @@ Systems or applications that verify the signature of a general-purpose or trust 
    KeyPurposeId  ::=  OBJECT IDENTIFIER
 ~~~
 
-As described in {{RFC5280}}, the EKU extension may, at the option of the certificate issuer, be either critical or non-critical. The inclusion of KeyPurposeIds id-kp-configSigning, id-kp-trustanchorconfigSigning, id-kp-updateSigning, and id-kp-safetyCommunication in a certificate indicates that the public key encoded in the certificate has been certified for the following usages:
+As described in {{RFC5280}}, the EKU extension may, at the option of the certificate issuer, be either critical or non-critical. The inclusion of KeyPurposeIds id-kp-configSigning, id-kp-trustanchorconfigSigning, id-kp-updatePackageSigning, and id-kp-safetyCommunication in a certificate indicates that the public key encoded in the certificate has been certified for the following usages:
 
 * id-kp-configSigning
 
@@ -218,9 +218,9 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 > A public key contained in a certificate containing the KeyPurposeId id-kp-trustanchorconfigSigning may be used for verifying signatures of trust anchor configuration files of various formats (for example XML, YAML, or JSON).
 > Trust anchor configuration files are used to add or remove trust anchors to the trust store of a device.
 
-* id-kp-updateSigning
+* id-kp-updatePackageSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updateSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications, and others) on systems.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updatePackageSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications, and others) on systems.
 
 * id-kp-safetyCommunication
 
@@ -233,14 +233,14 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
    id-kp-configSigning             OBJECT IDENTIFIER ::= { id-kp TBD2 }
    id-kp-trustanchorconfigSigning  OBJECT IDENTIFIER ::= { id-kp TBD3 }
-   id-kp-updateSigning             OBJECT IDENTIFIER ::= { id-kp TBD4 }
+   id-kp-updatePackageSigning      OBJECT IDENTIFIER ::= { id-kp TBD4 }
    id-kp-safetyCommunication       OBJECT IDENTIFIER ::= { id-kp TBD5 }
 ~~~
 
 
 # Implications for a Certification Authority {#ca-implication}
 
-The procedures and practices employed by a certification authority MUST ensure that the correct values for the EKU extension as well as the KU extension are inserted in each certificate that is issued. The inclusion of the id-kp-configSigning, id-kp-trustanchorconfigSigning, id-kp-updateSigning, and id-kp-safetyCommunication KeyPurposeIds does not preclude the inclusion of other KeyPurposeIds.
+The procedures and practices employed by a certification authority MUST ensure that the correct values for the EKU extension as well as the KU extension are inserted in each certificate that is issued. The inclusion of the id-kp-configSigning, id-kp-trustanchorconfigSigning, id-kp-updatePackageSigning, and id-kp-safetyCommunication KeyPurposeIds does not preclude the inclusion of other KeyPurposeIds.
 
 
 # Security Considerations {#security}
@@ -269,7 +269,7 @@ IANA is also requested to register the following OIDs in the "SMI Security for P
 |:--------|:---------------------------|:-----------|
 | TBD2    | id-kp-configSigning        | This-RFC   |
 | TBD3    | id-kp-trustanchorconfigSigning   | This-RFC   |
-| TBD4    | id-kp-updateSigning        | This-RFC   |
+| TBD4    | id-kp-updatePackageSigning | This-RFC   |
 | TBD5    | id-kp-safetyCommunication  | This-RFC   |
 
 
@@ -308,7 +308,7 @@ id-kp OBJECT IDENTIFIER ::=
 
 id-kp-configSigning            OBJECT IDENTIFIER ::= { id-kp TBD2 }
 id-kp-trustanchorconfigSigning OBJECT IDENTIFIER ::= { id-kp TBD3 }
-id-kp-updateSigning            OBJECT IDENTIFIER ::= { id-kp TBD4 }
+id-kp-updatePackageSigning     OBJECT IDENTIFIER ::= { id-kp TBD4 }
 id-kp-safetyCommunication      OBJECT IDENTIFIER ::= { id-kp TBD5 }
 
 END
@@ -324,7 +324,8 @@ END
 
 Changes from 02 -> 03:
 
-* Rename id-kp-trustanchorSigning to id-kp-trustanchorconfigSigning.
+* Rename id-kp-trustanchorSigning to id-kp-trustanchorconfigSigning
+* Rename id-kp-updateSigning to id-kp-updatPackageSigning
 
 Changes from 01 -> 02:
 
