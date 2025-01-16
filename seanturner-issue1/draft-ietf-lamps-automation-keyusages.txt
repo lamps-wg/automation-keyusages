@@ -225,7 +225,7 @@ Table of Contents
    relying party MUST ignore the KeyPurposeId id-kp-
    trustAnchorConfigSigning if id-kp-safetyCommunication is one of the
    specified key purposes in a certificate.', and the certificate policy
-   may specify: 'The id-kp-safetyCommunication KeyPuposeId SHOULD not be
+   may specify: 'The id-kp-safetyCommunication KeyPuposeId SHOULD NOT be
    included in an issued certificate together with the KeyPurposeId id-
    kp-trustAnchorConfigSigning.'  Technical standards and certificate
    policies of other area of application may specify other rules.
@@ -538,6 +538,8 @@ Appendix B.  History of Changes
    *  Rename id-kp-trustanchorSigning to id-kp-trustAnchorConfigSigning
 
    *  Rename id-kp-updateSigning to id-kp-updatPackageSigning
+
+   *  Fixed some nits
 
    Changes from 01 -> 02:
 
