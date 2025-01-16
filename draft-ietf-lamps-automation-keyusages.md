@@ -326,7 +326,7 @@ Changes from 02 -> 03:
 
 * Rename id-kp-trustanchorSigning to id-kp-trustAnchorConfigSigning
 
-* Rename id-kp-updateSigning to id-kp-updatPackageSigning
+* Rename id-kp-updateSigning to id-kp-updatePackageSigning
 
 * Fixed some nits
 
