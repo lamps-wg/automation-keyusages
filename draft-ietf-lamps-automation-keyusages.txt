@@ -537,7 +537,7 @@ Appendix B.  History of Changes
 
    *  Rename id-kp-trustanchorSigning to id-kp-trustAnchorConfigSigning
 
-   *  Rename id-kp-updateSigning to id-kp-updatPackageSigning
+   *  Rename id-kp-updateSigning to id-kp-updatePackageSigning
 
    *  Fixed some nits
 
