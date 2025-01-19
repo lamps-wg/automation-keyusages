@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-16T01:26:09.170763+00:00",
+  "timestamp": "2025-01-19T01:39:27.721058+00:00",
   "repo": "lamps-wg/automation-keyusages",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDONBBKu86mJg_5",
       "title": "Name change to id-kp-trustanchorconfigSigning",
       "url": "https://github.com/lamps-wg/automation-keyusages/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "seanturner",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "To avoid people who don't read the RFCs, can we change `id-kp-trustanchorSigning` to `id-kp-trustanchorconfigSigning`.",
       "createdAt": "2025-01-14T15:33:32Z",
-      "updatedAt": "2025-01-15T13:10:20Z",
-      "closedAt": null,
+      "updatedAt": "2025-01-16T08:49:14Z",
+      "closedAt": "2025-01-16T08:49:13Z",
       "comments": [
         {
           "author": "HBrock",
@@ -71,6 +71,20 @@
           "body": "I agree to this change, but propose a minor change improving readebility.\r\nChange `id-kp-trustanchorSigning` to `id-kp-trustAnchorConfigSigning`\r\n\r\nDoing this change, we could also implement the following change addressing a discussion from the WG Adoption.\r\nChange `id-kp-updateSigning` to `id-kp-updatePackageSigning`\r\n",
           "createdAt": "2025-01-15T13:10:18Z",
           "updatedAt": "2025-01-15T13:10:18Z"
+        },
+        {
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@seanturner are you fine with the change I proposed?",
+          "createdAt": "2025-01-16T07:10:30Z",
+          "updatedAt": "2025-01-16T07:10:30Z"
+        },
+        {
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@seanturner, thank you for the PR. @dgoltzsche and I have updated and merged it.\r\nIf you disagree with any of the changes made, please let us know. If you agree, please give me a quick thumbs up.\r\nI want to submit the new version as soon as possible so @russhousley can do the early assignment.",
+          "createdAt": "2025-01-16T07:54:59Z",
+          "updatedAt": "2025-01-16T07:54:59Z"
         }
       ]
     }
@@ -81,24 +95,26 @@
       "id": "PR_kwDONBBKu86HubmC",
       "title": "Address #1",
       "url": "https://github.com/lamps-wg/automation-keyusages/pull/2",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "seanturner",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "Closes #1",
       "createdAt": "2025-01-14T15:36:52Z",
-      "updatedAt": "2025-01-15T13:10:59Z",
+      "updatedAt": "2025-01-16T08:49:14Z",
       "baseRepository": "lamps-wg/automation-keyusages",
       "baseRefName": "main",
-      "baseRefOid": "96aec78513cdceb32d319cb930f2acea03266a0d",
+      "baseRefOid": "bec3c6aedf1ae559db9559d18eca2a5567d0cbe2",
       "headRepository": "lamps-wg/automation-keyusages",
       "headRefName": "seanturner-issue1",
-      "headRefOid": "b4b6f203eb9cc1e3334e86c8a332498262d4eac7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "27b83fabe9d84d2b06913f16b455c3d81996d77b",
+      "closedAt": "2025-01-16T08:49:14Z",
+      "mergedAt": "2025-01-16T08:49:14Z",
+      "mergedBy": "HBrock",
+      "mergeCommit": {
+        "oid": "27b83fabe9d84d2b06913f16b455c3d81996d77b"
+      },
       "comments": [
         {
           "author": "dgoltzsche",
@@ -113,6 +129,27 @@
           "body": "see my proposal in #1 ",
           "createdAt": "2025-01-15T13:10:57Z",
           "updatedAt": "2025-01-15T13:10:57Z"
+        },
+        {
+          "author": "dgoltzsche",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@HBrock I added the changes to @seanturner's branch",
+          "createdAt": "2025-01-16T07:33:52Z",
+          "updatedAt": "2025-01-16T07:33:52Z"
+        },
+        {
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "body": "I updated the OID from id-kp-trustanchorConfigSigning to id-kp-trustAnchorConfigSigning",
+          "createdAt": "2025-01-16T07:41:37Z",
+          "updatedAt": "2025-01-16T07:41:37Z"
+        },
+        {
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@seanturner are you fine with these updates?",
+          "createdAt": "2025-01-16T07:42:31Z",
+          "updatedAt": "2025-01-16T07:42:31Z"
         }
       ],
       "reviews": [
@@ -122,7 +159,7 @@
             "abbreviatedOid": "be9ff57"
           },
           "author": "seanturner",
-          "authorAssociation": "NONE",
+          "authorAssociation": "CONTRIBUTOR",
           "state": "COMMENTED",
           "body": "",
           "createdAt": "2025-01-14T15:37:14Z",
@@ -135,6 +172,32 @@
               "updatedAt": "2025-01-14T15:37:15Z"
             }
           ]
+        },
+        {
+          "id": "PRR_kwDONBBKu86YSqjr",
+          "commit": {
+            "abbreviatedOid": "ecd93d7"
+          },
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-01-16T07:48:34Z",
+          "updatedAt": "2025-01-16T07:48:34Z",
+          "comments": []
+        },
+        {
+          "id": "PRR_kwDONBBKu86YTRp5",
+          "commit": {
+            "abbreviatedOid": "27b83fa"
+          },
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2025-01-16T08:40:10Z",
+          "updatedAt": "2025-01-16T08:40:10Z",
+          "comments": []
         }
       ]
     }
