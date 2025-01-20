@@ -231,10 +231,10 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
        { iso(1) identified-organization(3) dod(6) internet(1)
          security(5) mechanisms(5) pkix(7) 3 }
 
-   id-kp-configSigning             OBJECT IDENTIFIER ::= { id-kp TBD2 }
-   id-kp-trustAnchorConfigSigning  OBJECT IDENTIFIER ::= { id-kp TBD3 }
-   id-kp-updatePackageSigning      OBJECT IDENTIFIER ::= { id-kp TBD4 }
-   id-kp-safetyCommunication       OBJECT IDENTIFIER ::= { id-kp TBD5 }
+   id-kp-configSigning             OBJECT IDENTIFIER ::= { id-kp 41 }
+   id-kp-trustAnchorConfigSigning  OBJECT IDENTIFIER ::= { id-kp 42 }
+   id-kp-updatePackageSigning      OBJECT IDENTIFIER ::= { id-kp 43 }
+   id-kp-safetyCommunication       OBJECT IDENTIFIER ::= { id-kp 44 }
 ~~~
 
 
@@ -267,10 +267,10 @@ IANA is also requested to register the following OIDs in the "SMI Security for P
 
 | Decimal | Description                    | References |
 |:--------|:-------------------------------|:-----------|
-| TBD2    | id-kp-configSigning            | This-RFC   |
-| TBD3    | id-kp-trustAnchorConfigSigning | This-RFC   |
-| TBD4    | id-kp-updatePackageSigning     | This-RFC   |
-| TBD5    | id-kp-safetyCommunication      | This-RFC   |
+| 41      | id-kp-configSigning            | This-RFC   |
+| 42      | id-kp-trustAnchorConfigSigning | This-RFC   |
+| 43      | id-kp-updatePackageSigning     | This-RFC   |
+| 44      | id-kp-safetyCommunication      | This-RFC   |
 
 
 # Acknowledgments {#acknow}
@@ -306,10 +306,10 @@ id-kp OBJECT IDENTIFIER ::=
 
 -- Extended Key Usage Values
 
-id-kp-configSigning            OBJECT IDENTIFIER ::= { id-kp TBD2 }
-id-kp-trustAnchorConfigSigning OBJECT IDENTIFIER ::= { id-kp TBD3 }
-id-kp-updatePackageSigning     OBJECT IDENTIFIER ::= { id-kp TBD4 }
-id-kp-safetyCommunication      OBJECT IDENTIFIER ::= { id-kp TBD5 }
+id-kp-configSigning            OBJECT IDENTIFIER ::= { id-kp 41 }
+id-kp-trustAnchorConfigSigning OBJECT IDENTIFIER ::= { id-kp 42 }
+id-kp-updatePackageSigning     OBJECT IDENTIFIER ::= { id-kp 43 }
+id-kp-safetyCommunication      OBJECT IDENTIFIER ::= { id-kp 44 }
 
 END
 
