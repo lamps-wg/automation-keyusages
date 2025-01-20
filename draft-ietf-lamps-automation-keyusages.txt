@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 20 July 2025                                   Siemens Mobility
-                                                         16 January 2025
+Expires: 24 July 2025                                   Siemens Mobility
+                                                         20 January 2025
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 20 July 2025.
+   This Internet-Draft will expire on 24 July 2025.
 
 Copyright Notice
 
@@ -299,14 +299,14 @@ Table of Contents
       a communication peer for safety-critical communication based on
       TLS or other protocols.
 
-    id-kp  OBJECT IDENTIFIER  ::=
-        { iso(1) identified-organization(3) dod(6) internet(1)
-          security(5) mechanisms(5) pkix(7) 3 }
+      id-kp  OBJECT IDENTIFIER  ::=
+          { iso(1) identified-organization(3) dod(6) internet(1)
+            security(5) mechanisms(5) pkix(7) 3 }
 
-    id-kp-configSigning             OBJECT IDENTIFIER ::= { id-kp TBD2 }
-    id-kp-trustAnchorConfigSigning  OBJECT IDENTIFIER ::= { id-kp TBD3 }
-    id-kp-updatePackageSigning      OBJECT IDENTIFIER ::= { id-kp TBD4 }
-    id-kp-safetyCommunication       OBJECT IDENTIFIER ::= { id-kp TBD5 }
+      id-kp-configSigning             OBJECT IDENTIFIER ::= { id-kp 41 }
+      id-kp-trustAnchorConfigSigning  OBJECT IDENTIFIER ::= { id-kp 42 }
+      id-kp-updatePackageSigning      OBJECT IDENTIFIER ::= { id-kp 43 }
+      id-kp-safetyCommunication       OBJECT IDENTIFIER ::= { id-kp 44 }
 
 5.  Implications for a Certification Authority
 
@@ -375,13 +375,13 @@ Table of Contents
          +=========+================================+============+
          | Decimal | Description                    | References |
          +=========+================================+============+
-         | TBD2    | id-kp-configSigning            | This-RFC   |
+         | 41      | id-kp-configSigning            | This-RFC   |
          +---------+--------------------------------+------------+
-         | TBD3    | id-kp-trustAnchorConfigSigning | This-RFC   |
+         | 42      | id-kp-trustAnchorConfigSigning | This-RFC   |
          +---------+--------------------------------+------------+
-         | TBD4    | id-kp-updatePackageSigning     | This-RFC   |
+         | 43      | id-kp-updatePackageSigning     | This-RFC   |
          +---------+--------------------------------+------------+
-         | TBD5    | id-kp-safetyCommunication      | This-RFC   |
+         | 44      | id-kp-safetyCommunication      | This-RFC   |
          +---------+--------------------------------+------------+
 
                                   Table 2
@@ -518,10 +518,10 @@ Appendix A.  ASN.1 Module
 
    -- Extended Key Usage Values
 
-   id-kp-configSigning            OBJECT IDENTIFIER ::= { id-kp TBD2 }
-   id-kp-trustAnchorConfigSigning OBJECT IDENTIFIER ::= { id-kp TBD3 }
-   id-kp-updatePackageSigning     OBJECT IDENTIFIER ::= { id-kp TBD4 }
-   id-kp-safetyCommunication      OBJECT IDENTIFIER ::= { id-kp TBD5 }
+   id-kp-configSigning            OBJECT IDENTIFIER ::= { id-kp 41 }
+   id-kp-trustAnchorConfigSigning OBJECT IDENTIFIER ::= { id-kp 42 }
+   id-kp-updatePackageSigning     OBJECT IDENTIFIER ::= { id-kp 43 }
+   id-kp-safetyCommunication      OBJECT IDENTIFIER ::= { id-kp 44 }
 
    END
 
