@@ -322,6 +322,10 @@ END
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
 
+Changes from 03 -> 04:
+
+* Added early allocated OIDs
+
 Changes from 02 -> 03:
 
 * Rename id-kp-trustanchorSigning to id-kp-trustAnchorConfigSigning
