@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-01-19T01:39:27.721058+00:00",
+  "timestamp": "2025-01-21T01:26:10.533063+00:00",
   "repo": "lamps-wg/automation-keyusages",
   "labels": [
     {
@@ -197,6 +197,48 @@
           "body": "",
           "createdAt": "2025-01-16T08:40:10Z",
           "updatedAt": "2025-01-16T08:40:10Z",
+          "comments": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "id": "PR_kwDONBBKu86IUFdp",
+      "title": "add early allocated EKU OIDs",
+      "url": "https://github.com/lamps-wg/automation-keyusages/pull/3",
+      "state": "MERGED",
+      "author": "dgoltzsche",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Add early allocated EKU OIDs by IANA (see https://www.iana.org/assignments/smi-numbers/smi-numbers.xhtml#smi-numbers-1.3.6.1.5.5.7.3)",
+      "createdAt": "2025-01-20T08:04:58Z",
+      "updatedAt": "2025-01-20T16:42:24Z",
+      "baseRepository": "lamps-wg/automation-keyusages",
+      "baseRefName": "main",
+      "baseRefOid": "f65d7d6cd0d82d92c6d5469e4a2bb00c4d4240c9",
+      "headRepository": "lamps-wg/automation-keyusages",
+      "headRefName": "add-early-allocated-oids",
+      "headRefOid": "ba2b5dfc8b4d3809d244816fb1e841afc2e205bf",
+      "closedAt": "2025-01-20T16:42:23Z",
+      "mergedAt": "2025-01-20T16:42:23Z",
+      "mergedBy": "HBrock",
+      "mergeCommit": {
+        "oid": "52185c0554204a53515bea72bed33db04bc48d64"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDONBBKu86YwZHe",
+          "commit": {
+            "abbreviatedOid": "ba2b5df"
+          },
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "thank you for the PR. It will be submitted as soon as we have further changes or the RFC-Editors will do this change.",
+          "createdAt": "2025-01-20T16:42:12Z",
+          "updatedAt": "2025-01-20T16:42:12Z",
           "comments": []
         }
       ]
