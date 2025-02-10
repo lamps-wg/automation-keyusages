@@ -331,8 +331,6 @@ Changes from 04 -> 05:
 
 * Addressed SECDIR review comments from Carl Wallace
 
-* Added OIDs from early allocation
-
 
 Changes from 03 -> 04:
 
