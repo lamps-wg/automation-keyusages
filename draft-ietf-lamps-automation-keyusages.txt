@@ -543,8 +543,6 @@ Appendix B.  History of Changes
 
    *  Addressed SECDIR review comments from Carl Wallace
 
-   *  Added OIDs from early allocation
-
    Changes from 03 -> 04:
 
    *  Addressed Deb's AD review comments (see "AD Comments on draft-
