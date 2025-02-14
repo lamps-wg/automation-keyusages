@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 14 August 2025                                 Siemens Mobility
-                                                        10 February 2025
+Expires: 18 August 2025                                 Siemens Mobility
+                                                        14 February 2025
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
@@ -50,7 +50,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 August 2025.
+   This Internet-Draft will expire on 18 August 2025.
 
 Copyright Notice
 
@@ -190,10 +190,10 @@ Table of Contents
    Although the specification focuses on use in industrial automation,
    the definitions are intentionally broad to allow the use of the
    KeyPurposeIds defined in this document in other deployments as well.
-   How any of the KeyPurpose OIDs defined in this document are
-   implemented is out of scope of this document.  In other words,
-   details must be described in technical standards and certificate
-   policies for those implementations.
+   The context in which the KeyPurposeIds defined in this document are
+   used is out of scope for this document.  In other words, details must
+   be described in technical standards and certificate policies for
+   those implementations.
 
 2.  Conventions and Definitions
 
