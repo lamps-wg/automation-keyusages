@@ -8,9 +8,9 @@
 <meta content="Hendrik Brockhaus" name="author">
 <meta content="David Goltzsche" name="author">
 <meta content="
-       RFC 5280 defines the ExtendedKeyUsage extension and several extended key purpose identifiers (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates used by industrial automation and the Europe's Rail Joint Undertaking (ERJU) System Pillar. 
+       RFC 5280 defines the ExtendedKeyUsage extension and several extended key purpose identifiers (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates. 
     " name="description">
-<meta content="xml2rfc 3.26.0" name="generator">
+<meta content="xml2rfc 3.28.0" name="generator">
 <meta content="Industrial Automation" name="keyword">
 <meta content="ERJU" name="keyword">
 <meta content="extended key usage" name="keyword">
@@ -18,12 +18,12 @@
 <meta content="PKI" name="keyword">
 <meta content="draft-ietf-lamps-automation-keyusages-latest" name="ietf.draft">
 <!-- Generator version information:
-  xml2rfc 3.26.0
-    Python 3.12.8
+  xml2rfc 3.28.0
+    Python 3.12.9
     ConfigArgParse 1.7
     google-i18n-address 3.1.1
     intervaltree 3.1.0
-    Jinja2 3.1.5
+    Jinja2 3.1.6
     lxml 5.3.0
     platformdirs 4.3.6
     pycountry 24.6.1
@@ -440,7 +440,7 @@ dl {
     margin-bottom: 0;
   }
 }
-dl > dt {
+dl:not(.dlNewline) > dt {
   float: left;
   margin-right: 2ch;
   min-width: 8ch;
@@ -1049,11 +1049,11 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <thead><tr>
 <td class="left">Internet-Draft</td>
 <td class="center">EKU for Automation</td>
-<td class="right">February 2025</td>
+<td class="right">March 2025</td>
 </tr></thead>
 <tfoot><tr>
 <td class="left">Brockhaus &amp; Goltzsche</td>
-<td class="center">Expires 18 August 2025</td>
+<td class="center">Expires 21 September 2025</td>
 <td class="right">[Page]</td>
 </tr></tfoot>
 </table>
@@ -1066,12 +1066,12 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <dd class="internet-draft">draft-ietf-lamps-automation-keyusages-latest</dd>
 <dt class="label-published">Published:</dt>
 <dd class="published">
-<time datetime="2025-02-14" class="published">14 February 2025</time>
+<time datetime="2025-03-20" class="published">20 March 2025</time>
     </dd>
 <dt class="label-intended-status">Intended Status:</dt>
 <dd class="intended-status">Standards Track</dd>
 <dt class="label-expires">Expires:</dt>
-<dd class="expires"><time datetime="2025-08-18">18 August 2025</time></dd>
+<dd class="expires"><time datetime="2025-09-21">21 September 2025</time></dd>
 <dt class="label-authors">Authors:</dt>
 <dd class="authors">
 <div class="author">
@@ -1088,7 +1088,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <h1 id="title">X.509 Certificate Extended Key Usage (EKU) for Automation</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
-<p id="section-abstract-1">RFC 5280 defines the ExtendedKeyUsage extension and several extended key purpose identifiers (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates used by industrial automation and the Europe's Rail Joint Undertaking (ERJU) System Pillar.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
+<p id="section-abstract-1">RFC 5280 defines the ExtendedKeyUsage extension and several extended key purpose identifiers (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
 </section>
 <section class="note rfcEditorRemove" id="section-note.1">
       <h2 id="name-discussion-venues">
@@ -1120,7 +1120,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
         time. It is inappropriate to use Internet-Drafts as reference
         material or to cite them other than as "work in progress."<a href="#section-boilerplate.1-3" class="pilcrow">¶</a></p>
 <p id="section-boilerplate.1-4">
-        This Internet-Draft will expire on 18 August 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
+        This Internet-Draft will expire on 21 September 2025.<a href="#section-boilerplate.1-4" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="copyright">
@@ -1151,12 +1151,17 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <nav class="toc"><ul class="compact toc ulBare ulEmpty">
 <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1">
             <p id="section-toc.1-1.1.1" class="keepWithNext"><a href="#section-1" class="auto internal xref">1</a>.  <a href="#name-introduction" class="internal xref">Introduction</a></p>
+<ul class="compact toc ulBare ulEmpty">
+<li class="compact toc ulBare ulEmpty" id="section-toc.1-1.1.2.1">
+                <p id="section-toc.1-1.1.2.1.1" class="keepWithNext"><a href="#section-1.1" class="auto internal xref">1.1</a>.  <a href="#name-use-cases" class="internal xref">Use Cases</a></p>
+</li>
+            </ul>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.2">
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-extended-key-purpose-for-au" class="internal xref">Extended Key Purpose for Automation</a></p>
+            <p id="section-toc.1-1.3.1"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-extended-key-purpose-for-au" class="internal xref">Extended Key Purpose for Automation</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-including-the-extended-key-" class="internal xref">Including the Extended Key Purpose in Certificates</a></p>
@@ -1208,32 +1213,39 @@ svg :is([fill="white"], [fill^="#fff"]) {
       <h2 id="name-introduction">
 <a href="#section-1" class="section-number selfRef">1. </a><a href="#name-introduction" class="section-name selfRef">Introduction</a>
       </h2>
-<p id="section-1-1">Automation hardware and software products will strategically be more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the <span><a href="#EU-CRA" class="internal xref">European Union Cyber Resilience Act</a> [<a href="#EU-CRA" class="cite xref">EU-CRA</a>]</span> governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
-Automation products connected to the internet would bear the so called <span><a href="#CE-marking" class="internal xref">CE marking</a> [<a href="#CE-marking" class="cite xref">CE-marking</a>]</span> to indicate they comply.
-Such regulation was announced in the <span><a href="#EU-STRATEGY" class="internal xref">2020 EU Cybersecurity Strategy</a> [<a href="#EU-STRATEGY" class="cite xref">EU-STRATEGY</a>]</span>, and complements other legislation in this area, specifically the NIS2 Framework, <span><a href="#NIS2" class="internal xref">Directive on measures for a high common level of cybersecurity across the Union</a> [<a href="#NIS2" class="cite xref">NIS2</a>]</span>.
-2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the <span><a href="#IEC.62443-4-2" class="internal xref">Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components</a> [<a href="#IEC.62443-4-2" class="cite xref">IEC.62443-4-2</a>]</span> (IACS refers to industrial automation and control system) and the <span><a href="#IEC.62443-3-3" class="internal xref">Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels</a> [<a href="#IEC.62443-3-3" class="cite xref">IEC.62443-3-3</a>]</span>. Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build common automation solutions. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration, and secure safety communication.<a href="#section-1-1" class="pilcrow">¶</a></p>
-<p id="section-1-2">A concrete example for Automation is a Rail Automation system. The <span><a href="#ERJU" class="internal xref">Europe's Rail Joint Undertaking System Pillar</a> [<a href="#ERJU" class="cite xref">ERJU</a>]</span> will deliver a unified operational concept and a functional, safe, and secure system architecture with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which <span><a href="#Directive-2016_797" class="internal xref">Directive 2016/797 - Interoperability of the rail system within the EU</a> [<a href="#Directive-2016_797" class="cite xref">Directive-2016_797</a>]</span> applies.<a href="#section-1-2" class="pilcrow">¶</a></p>
-<p id="section-1-3">The ERJU System Pillar Cyber Security Working Group makes use of PKIs to generate X.509 PKI certificates. The certificates are used for the following purposes, among others:<a href="#section-1-3" class="pilcrow">¶</a></p>
+<p id="section-1-1"><span>[<a href="#RFC5280" class="cite xref">RFC5280</a>]</span> specifies several extended key usages, defined via KeyPurposeIds, for X.509 certificates. KeyPurposeIds added to a certificate are meant to express intent as to the purpose of the named usage, for humans and for complying libraries. In addition, the IANA registry "SMI Security for PKIX Extended Key Purpose" <span>[<a href="#RFC7299" class="cite xref">RFC7299</a>]</span> contains additional KeyPurposeIds. The use of the anyExtendedKeyUsage KeyPurposeId, as defined in <span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>, is generally considered a poor practice.<a href="#section-1-1" class="pilcrow">¶</a></p>
+<p id="section-1-2">This document defines KeyPurposeIds for certificates that are used for the following purposes, among others:<a href="#section-1-2" class="pilcrow">¶</a></p>
 <ul class="normal">
-<li class="normal" id="section-1-4.1">
-          <p id="section-1-4.1.1">Validating signatures of general-purpose software configuration files.<a href="#section-1-4.1.1" class="pilcrow">¶</a></p>
+<li class="normal" id="section-1-3.1">
+          <p id="section-1-3.1.1">Validating signatures of general-purpose software configuration files.<a href="#section-1-3.1.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-4.2">
-          <p id="section-1-4.2.1">Validating signatures of trust anchor configuration files.<a href="#section-1-4.2.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-1-3.2">
+          <p id="section-1-3.2.1">Validating signatures of trust anchor configuration files.<a href="#section-1-3.2.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-4.3">
-          <p id="section-1-4.3.1">Validating signatures of software and firmware update packages.<a href="#section-1-4.3.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-1-3.3">
+          <p id="section-1-3.3.1">Validating signatures of software and firmware update packages.<a href="#section-1-3.3.1" class="pilcrow">¶</a></p>
 </li>
-        <li class="normal" id="section-1-4.4">
-          <p id="section-1-4.4.1">Authenticating communication endpoints authorized for safety-critical communication.<a href="#section-1-4.4.1" class="pilcrow">¶</a></p>
+        <li class="normal" id="section-1-3.4">
+          <p id="section-1-3.4.1">Authenticating communication endpoints authorized for safety-critical communication.<a href="#section-1-3.4.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="section-1-5"><span>[<a href="#RFC5280" class="cite xref">RFC5280</a>]</span> specifies several extended key usages, defined via KeyPurposeIds, for X.509 certificates. KeyPurposeIds added to a certificate are meant to express intent as to the purpose of the named usage, for humans and for complying libraries. In addition, the IANA registry "SMI Security for PKIX Extended Key Purpose" <span>[<a href="#RFC7299" class="cite xref">RFC7299</a>]</span> contains additional KeyPurposeIds. The use of the anyExtendedKeyUsage KeyPurposeId, as defined in <span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>, is generally considered a poor practice. This is especially true for certificates, whether they are multi-purpose or single-purpose, within the context of ERJU System Pillar.<a href="#section-1-5" class="pilcrow">¶</a></p>
-<p id="section-1-6">If the purpose of the issued certificates is not restricted, i.e., the type of operations for which a public key contained in the certificate can be used in unintended ways, increasing the risk of cross-application attacks. Failure to ensure proper segregation of duties means that an application or system that generates the public/private keys and applies for a certificate to the operator certification authority could obtain a certificate that can be misused for tasks that this application or system is not entitled to perform. For example, management of trust anchors is a particularly critical task. A device could potentially accept a trust anchor configuration file signed by a service that uses a certificate with no EKU or with the KeyPurposeId id-kp-codeSigning (<span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>) or id-kp-documentSigning <span>[<a href="#RFC9336" class="cite xref">RFC9336</a>]</span>. A device should only accept trust anchor configuration files if the file is verified with a certificate that has been explicitly issued for this purpose.<a href="#section-1-6" class="pilcrow">¶</a></p>
-<p id="section-1-7">The KeyPurposeId id-kp-serverAuth (<span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>) can be used to identify that the certificate is for a TLS WWW server, and the KeyPurposeId id-kp-clientAuth (<span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>) can be used to identify that the certificate is for a TLS WWW client. However, there are currently no KeyPurposeIds for usage with X.509 certificates for safety-critical communication.<a href="#section-1-7" class="pilcrow">¶</a></p>
-<p id="section-1-8">This document addresses the above problems by defining keyPurposeIds for the EKU extension of X.509 public key certificates. These certificates are either used for signing files (general-purpose configuration and trust anchor configuration files, software and firmware update packages) or are used for safety-critical communication.<a href="#section-1-8" class="pilcrow">¶</a></p>
-<p id="section-1-9">Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using KeyPurposeIds outside of their intended vendor-controlled environment or in ExtendedKeyUsage extensions that have been marked critical can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various vendors and industries.<a href="#section-1-9" class="pilcrow">¶</a></p>
-<p id="section-1-10">Although the specification focuses on use in industrial automation, the definitions are intentionally broad to allow the use of the KeyPurposeIds defined in this document in other deployments as well. The context in which the KeyPurposeIds defined in this document are used is out of scope for this document. In other words, details must be described in technical standards and certificate policies for those implementations.<a href="#section-1-10" class="pilcrow">¶</a></p>
+<p id="section-1-4">If the purpose of the issued certificates is not restricted, i.e., the type of operations for which a public key contained in the certificate can be used in unintended ways, increasing the risk of cross-application attacks. Failure to ensure proper segregation of duties means that an application or system that generates the public/private keys and applies for a certificate to the operator certification authority could obtain a certificate that can be misused for tasks that this application or system is not entitled to perform. For example, management of trust anchors is a particularly critical task. A device could potentially accept a trust anchor configuration file signed by a service that uses a certificate with no EKU or with the KeyPurposeId id-kp-codeSigning (<span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>) or id-kp-documentSigning <span>[<a href="#RFC9336" class="cite xref">RFC9336</a>]</span>. A device should only accept trust anchor configuration files if the file is verified with a certificate that has been explicitly issued for this purpose.<a href="#section-1-4" class="pilcrow">¶</a></p>
+<p id="section-1-5">The KeyPurposeId id-kp-serverAuth (<span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>) can be used to identify that the certificate is for a TLS WWW server, and the KeyPurposeId id-kp-clientAuth (<span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>) can be used to identify that the certificate is for a TLS WWW client. However, there are currently no KeyPurposeIds for usage with X.509 certificates for safety-critical communication.<a href="#section-1-5" class="pilcrow">¶</a></p>
+<p id="section-1-6">This document addresses the above problems by defining keyPurposeIds for the EKU extension of X.509 public key certificates. These certificates are either used for signing files (general-purpose configuration and trust anchor configuration files, software and firmware update packages) or are used for safety-critical communication.<a href="#section-1-6" class="pilcrow">¶</a></p>
+<p id="section-1-7">Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using KeyPurposeIds outside of their intended vendor-controlled environment or in ExtendedKeyUsage extensions that have been marked critical can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, the specification defines standard KeyPurposeIds to ensure interoperability across various vendors and industries.<a href="#section-1-7" class="pilcrow">¶</a></p>
+<p id="section-1-8">Although the specification focuses on use in industrial automation, the definitions are intentionally broad to allow the use of the KeyPurposeIds defined in this document in other deployments as well. The context in which the KeyPurposeIds defined in this document are used is out of scope for this document. In other words, details must be described in technical standards and certificate policies for those implementations.<a href="#section-1-8" class="pilcrow">¶</a></p>
+<div id="use-cases">
+<section id="section-1.1">
+        <h3 id="name-use-cases">
+<a href="#section-1.1" class="section-number selfRef">1.1. </a><a href="#name-use-cases" class="section-name selfRef">Use Cases</a>
+        </h3>
+<p id="section-1.1-1">Automation hardware and software products should become be more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the <span><a href="#EU-CRA" class="internal xref">European Union Cyber Resilience Act</a> [<a href="#EU-CRA" class="cite xref">EU-CRA</a>]</span> governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
+Automation products connected to the internet would bear the so called <span><a href="#CE-marking" class="internal xref">CE marking</a> [<a href="#CE-marking" class="cite xref">CE-marking</a>]</span> to indicate they comply.
+Such regulation was announced in the <span><a href="#EU-STRATEGY" class="internal xref">2020 EU Cybersecurity Strategy</a> [<a href="#EU-STRATEGY" class="cite xref">EU-STRATEGY</a>]</span>, and complements other legislation in this area, specifically the NIS2 Framework, <span><a href="#NIS2" class="internal xref">Directive on measures for a high common level of cybersecurity across the Union</a> [<a href="#NIS2" class="cite xref">NIS2</a>]</span>.
+2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the <span><a href="#IEC.62443-4-2" class="internal xref">Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components</a> [<a href="#IEC.62443-4-2" class="cite xref">IEC.62443-4-2</a>]</span> (IACS refers to industrial automation and control system) and the <span><a href="#IEC.62443-3-3" class="internal xref">Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels</a> [<a href="#IEC.62443-3-3" class="cite xref">IEC.62443-3-3</a>]</span>. Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build common automation solutions. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration, and secure safety communication.<a href="#section-1.1-1" class="pilcrow">¶</a></p>
+<p id="section-1.1-2">A concrete example for Automation is a Rail Automation system. The <span><a href="#ERJU" class="internal xref">Europe's Rail Joint Undertaking System Pillar</a> [<a href="#ERJU" class="cite xref">ERJU</a>]</span> will deliver a unified operational concept and a functional, safe, and secure system architecture with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which <span><a href="#Directive-2016_797" class="internal xref">Directive 2016/797 - Interoperability of the rail system within the EU</a> [<a href="#Directive-2016_797" class="cite xref">Directive-2016_797</a>]</span> applies.<a href="#section-1.1-2" class="pilcrow">¶</a></p>
+</section>
+</div>
 </section>
 </div>
 <div id="conventions">
@@ -1565,79 +1577,85 @@ END
 <a href="#appendix-B" class="section-number selfRef">Appendix B. </a><a href="#name-history-of-changes" class="section-name selfRef">History of Changes</a>
       </h2>
 <p id="appendix-B-1">[RFC Editor: Please remove this appendix in the release version of the document.]<a href="#appendix-B-1" class="pilcrow">¶</a></p>
-<p id="appendix-B-2">Changes from 04 -&gt; 05:<a href="#appendix-B-2" class="pilcrow">¶</a></p>
+<p id="appendix-B-2">Changes from 05 -&gt; 06:<a href="#appendix-B-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-3.1">
-          <p id="appendix-B-3.1.1">Addressed SECDIR review comments from Carl Wallace<a href="#appendix-B-3.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-3.1.1">Addressed AD review comments from Erik Kline and Eric Vyncke<a href="#appendix-B-3.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-4">Changes from 03 -&gt; 04:<a href="#appendix-B-4" class="pilcrow">¶</a></p>
+<p id="appendix-B-4">Changes from 04 -&gt; 05:<a href="#appendix-B-4" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-5.1">
-          <p id="appendix-B-5.1.1">Addressed Deb's AD review comments (see "AD Comments on draft-ietf-lamps-automation-keyusages")<a href="#appendix-B-5.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="appendix-B-5.2">
-          <p id="appendix-B-5.2.1">Added early allocated OIDs<a href="#appendix-B-5.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-5.1.1">Addressed SECDIR review comments from Carl Wallace<a href="#appendix-B-5.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-6">Changes from 02 -&gt; 03:<a href="#appendix-B-6" class="pilcrow">¶</a></p>
+<p id="appendix-B-6">Changes from 03 -&gt; 04:<a href="#appendix-B-6" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-7.1">
-          <p id="appendix-B-7.1.1">Rename id-kp-trustanchorSigning to id-kp-trustAnchorConfigSigning<a href="#appendix-B-7.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-7.1.1">Addressed Deb's AD review comments (see "AD Comments on draft-ietf-lamps-automation-keyusages")<a href="#appendix-B-7.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-7.2">
-          <p id="appendix-B-7.2.1">Rename id-kp-updateSigning to id-kp-updatePackageSigning<a href="#appendix-B-7.2.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="appendix-B-7.3">
-          <p id="appendix-B-7.3.1">Fixed some nits<a href="#appendix-B-7.3.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-7.2.1">Added early allocated OIDs<a href="#appendix-B-7.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-8">Changes from 01 -&gt; 02:<a href="#appendix-B-8" class="pilcrow">¶</a></p>
+<p id="appendix-B-8">Changes from 02 -&gt; 03:<a href="#appendix-B-8" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-9.1">
-          <p id="appendix-B-9.1.1">Updates Sections 3 and 6 addressing last call comments (see "WG Last Call for draft-ietf-lamps-automation-keyusages-01")<a href="#appendix-B-9.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-9.1.1">Rename id-kp-trustanchorSigning to id-kp-trustAnchorConfigSigning<a href="#appendix-B-9.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-9.2">
+          <p id="appendix-B-9.2.1">Rename id-kp-updateSigning to id-kp-updatePackageSigning<a href="#appendix-B-9.2.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-9.3">
+          <p id="appendix-B-9.3.1">Fixed some nits<a href="#appendix-B-9.3.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="appendix-B-10">Changes from 01 -&gt; 02:<a href="#appendix-B-10" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-11.1">
-          <p id="appendix-B-11.1.1">Implemented the changes requested during WGLC<a href="#appendix-B-11.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-11.1.1">Updates Sections 3 and 6 addressing last call comments (see "WG Last Call for draft-ietf-lamps-automation-keyusages-01")<a href="#appendix-B-11.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-12">Changes from 00 -&gt; 01:<a href="#appendix-B-12" class="pilcrow">¶</a></p>
+<p id="appendix-B-12">Changes from 01 -&gt; 02:<a href="#appendix-B-12" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-13.1">
-          <p id="appendix-B-13.1.1">Fixed some minor nids and wording issues<a href="#appendix-B-13.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-13.1.1">Implemented the changes requested during WGLC<a href="#appendix-B-13.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-14">draft-ietf-lamps-automation-keyusages version 00:<a href="#appendix-B-14" class="pilcrow">¶</a></p>
+<p id="appendix-B-14">Changes from 00 -&gt; 01:<a href="#appendix-B-14" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-15.1">
-          <p id="appendix-B-15.1.1">Updated document and filename after WG adoption<a href="#appendix-B-15.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-15.1.1">Fixed some minor nids and wording issues<a href="#appendix-B-15.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-16">Changes from 00 -&gt; 01:<a href="#appendix-B-16" class="pilcrow">¶</a></p>
+<p id="appendix-B-16">draft-ietf-lamps-automation-keyusages version 00:<a href="#appendix-B-16" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-17.1">
-          <p id="appendix-B-17.1.1">Updated last paragraph of Section 1 addressing WG adoption comments by Rich and Russ<a href="#appendix-B-17.1.1" class="pilcrow">¶</a></p>
-</li>
-        <li class="normal" id="appendix-B-17.2">
-          <p id="appendix-B-17.2.1">Updated name and OID of ASN.1 module<a href="#appendix-B-17.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-17.1.1">Updated document and filename after WG adoption<a href="#appendix-B-17.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-18">draft-brockhaus-lamps-automation-keyusages version 00:<a href="#appendix-B-18" class="pilcrow">¶</a></p>
+<p id="appendix-B-18">Changes from 00 -&gt; 01:<a href="#appendix-B-18" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-19.1">
-          <p id="appendix-B-19.1.1">Broadened the scope to general automation use case and use ERJU as an example.<a href="#appendix-B-19.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-19.1.1">Updated last paragraph of Section 1 addressing WG adoption comments by Rich and Russ<a href="#appendix-B-19.1.1" class="pilcrow">¶</a></p>
 </li>
         <li class="normal" id="appendix-B-19.2">
-          <p id="appendix-B-19.2.1">Fixed some nits reported.<a href="#appendix-B-19.2.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-19.2.1">Updated name and OID of ASN.1 module<a href="#appendix-B-19.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
-<p id="appendix-B-20">draft-brockhaus-lamps-eu-rail-keyusages version 00:<a href="#appendix-B-20" class="pilcrow">¶</a></p>
+<p id="appendix-B-20">draft-brockhaus-lamps-automation-keyusages version 00:<a href="#appendix-B-20" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-21.1">
-          <p id="appendix-B-21.1.1">Initial version of the document following best practices from RFC 9336 and RFC 9509<a href="#appendix-B-21.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-21.1.1">Broadened the scope to general automation use case and use ERJU as an example.<a href="#appendix-B-21.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-21.2">
+          <p id="appendix-B-21.2.1">Fixed some nits reported.<a href="#appendix-B-21.2.1" class="pilcrow">¶</a></p>
+</li>
+      </ul>
+<p id="appendix-B-22">draft-brockhaus-lamps-eu-rail-keyusages version 00:<a href="#appendix-B-22" class="pilcrow">¶</a></p>
+<ul class="normal">
+<li class="normal" id="appendix-B-23.1">
+          <p id="appendix-B-23.1.1">Initial version of the document following best practices from RFC 9336 and RFC 9509<a href="#appendix-B-23.1.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 </section>
