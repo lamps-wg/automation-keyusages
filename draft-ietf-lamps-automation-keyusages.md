@@ -120,6 +120,17 @@ informative:
     author:
       org: European Commission
     date: '2020-12-16'
+  NIST_Glossary:
+    target: https://csrc.nist.gov/glossary/term/safety
+    title: 'Directive (EU) 2022/2555 of the European Parliament and of the Council'
+    author:
+      org: NIST CSRC
+  ISO.IEC.IEEE_12207:
+    target: https://www.iso.org/standard/63712.html
+    title: 'Systems and software engineering – Software life cycle processes'
+    author:
+      org: ISO/IEC/IEEE
+    date: '2024-12-14'
   NIS2:
     target: https://digital-strategy.ec.europa.eu/en/policies/nis2-directive
     title: 'Directive (EU) 2022/2555 of the European Parliament and of the Council'
@@ -146,12 +157,12 @@ informative:
     target: https://single-market-economy.ec.europa.eu/single-market/ce-marking_en
     title: 'CE marking'
     author:
-      org: 'European Commission'
+      org: European Commission
 
 --- abstract
 
 
-RFC 5280 defines the ExtendedKeyUsage extension and several extended key purpose identifiers (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the Extended Key Usage (EKU) extension of X.509 v3 public key certificates.
+RFC 5280 defines the Extended Key Usage (EKU) extension and several extended key purposes (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the EKU extension of X.509 v3 public key certificates.
 
 --- middle
 
@@ -185,14 +196,18 @@ Although this specification focuses on use in industrial automation, the definit
 Automation hardware and software products will become more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
 Automation products connected to the internet would bear the so called [CE marking](#CE-marking) to indicate they comply.
 Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
-2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) (IACS refers to industrial automation and control system) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build common automation solutions. Harmonized attributes would allow transparency of security properties and interoperability for vendors in context of secure software and firmware updates, general-purpose configuration, trust anchor configuration, and secure safety communication.
+2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) (IACS refers to industrial automation and control system) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build common automation solutions. Standardized attributes would allow transparency of security properties and interoperability for vendors in context of software and firmware updates, general-purpose configuration, trust anchor configuration, and safety communication.
 
-A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) will deliver a unified operational concept and a functional, safe, and secure system architecture with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
+A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) deliver a unified operational concept and a functional, safe, and secure system architecture with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
 
 # Conventions and Definitions {#conventions}
 
 {::boilerplate bcp14-tagged}
+
+This document uses terms defined in [RFC5280]. X.509 certificate extensions are defined using ASN.1 [X.680] and [X.690].
+
+The term 'safety-critical communication' refers to communication that could, under certain conditions, lead to a state in which human life, health, property, or the environment is endangered. For the definition of 'safety', see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
 
 
 # Extended Key Purpose for Automation {#EKU}
@@ -227,7 +242,7 @@ As described in {{RFC5280}}, the EKU extension may, at the option of the certifi
 
 * id-kp-updatePackageSigning
 
-> A public key contained in a certificate containing the KeyPurposeId id-kp-updatePackageSigning may be used for verifying signatures of secure software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications, and others) on systems.
+> A public key contained in a certificate containing the KeyPurposeId id-kp-updatePackageSigning may be used for verifying signatures of software or firmware update packages. Update packages are used to install software (including bootloader, firmware, safety-related applications, and others) on systems.
 
 * id-kp-safetyCommunication
 
@@ -254,7 +269,7 @@ The procedures and practices employed by a certification authority MUST ensure t
 
 The Security Considerations of {{RFC5280}} are applicable to this document. These extended key usage key purposes do not introduce new security risks but instead reduce existing security risks by providing the means to identify if the certificate is generated to verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication.
 
-To reduce the risk of specific cross-protocol attacks, the relying party or the relying party software may additionally prohibit use of specific combinations of KeyPurposeIds.  The procedure for allowing or disallowing combinations of KeyPurposeIds using excluded KeyPurposeId and permitted KeyPurposeId, as carried out by a relying party, is defined in {{Section 4 of RFC9336}}.  The technical standards and certificate policies of the application should specify concrete requirements for excluded or permitted KeyPurposeIds or their combinations. An example of excluded KeyPurposeIds can be the presence of the anyExtendedKeyUsage KeyPurposeId. Examples of allowed KeyPurposeIds combinations can be the presence of id-kp-safetyCommunication together with id-kp-clinetAuth or id-kp-serverAuth.
+To reduce the risk of specific cross-protocol attacks, the relying party may additionally prohibit use of specific combinations of KeyPurposeIds.  The procedure for allowing or disallowing combinations of KeyPurposeIds using excluded KeyPurposeId and permitted KeyPurposeId, as carried out by a relying party, is defined in {{Section 4 of RFC9336}}.  The technical standards and certificate policies of the application should explicitly enumerate requirements for excluded or permitted KeyPurposeIds or their combinations. An example of excluded KeyPurposeIds can be the presence of the anyExtendedKeyUsage KeyPurposeId. Examples of allowed KeyPurposeIds combinations can be the presence of id-kp-safetyCommunication together with id-kp-clinetAuth or id-kp-serverAuth.
 
 # Privacy Considerations {#privacy}
 
@@ -300,7 +315,7 @@ The following module adheres to ASN.1 specifications {{X.680}} and
 Automation-EKU
   { iso(1) identified-organization(3) dod(6) internet(1)
     security(5) mechanisms(5) pkix(7) id-mod(0)
-    id-mod-eu-automation-eku (TBD1) }
+    id-mod-automation-eku (TBD1) }
 
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
@@ -331,7 +346,7 @@ END
 
 Changes from 05 -> 06:
 
-* Addressed AD review comments from Erik Kline and Eric Vyncke
+* Addressed AD review comments from Andy Newton, Mohamed Boucadair, Erik Kline, and Eric Vyncke
 
 Changes from 04 -> 05:
 
