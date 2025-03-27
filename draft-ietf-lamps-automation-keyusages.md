@@ -189,14 +189,15 @@ This document addresses the above problems by defining keyPurposeIds for the EKU
 
 Vendor-defined KeyPurposeIds used within a PKI governed by the vendor or a group of vendors typically do not pose interoperability concerns, as non-critical extensions can be safely ignored if unrecognized. However, using KeyPurposeIds outside of their intended vendor-controlled environment or in ExtendedKeyUsage extensions that have been marked critical can lead to interoperability issues. Therefore, it is advisable not to rely on vendor-defined KeyPurposeIds. Instead, this specification defines standard KeyPurposeIds to ensure interoperability across various vendors and industries.
 
-Although this specification focuses on use in industrial automation, the definitions are intentionally broad to allow the use of the KeyPurposeIds defined in this document in other deployments as well. The context in which the KeyPurposeIds defined in this document are used is out of scope for this document. In other words, details must be described in technical standards and certificate policies for those implementations.
+This specification focuses on use in industrial automation and rail automation. The definitions are intentionally broad to also allow use of the KeyPurposeIds in other deployments. The context in which the KeyPurposeIds defined in this document are used is out of scope for this document. The details for each deployment needs to be
+described in technical standards and certificate policies.
 
 ## Use Cases
 
 Automation hardware and software products will become more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
 Automation products connected to the internet would bear the so called [CE marking](#CE-marking) to indicate they comply.
 Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
-2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) (IACS refers to industrial automation and control system) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet build common automation solutions. Standardized attributes would allow transparency of security properties and interoperability for vendors in context of software and firmware updates, general-purpose configuration, trust anchor configuration, and safety communication.
+2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) (IACS refers to industrial automation and control system) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the internet can be used to build common automation solutions. Standardized attributes would allow transparency of security properties and interoperability for vendors in context of software and firmware updates, general-purpose configuration, trust anchor configuration, and safety communication.
 
 A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) deliver a unified operational concept and a functional, safe, and secure system architecture with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
 
@@ -207,7 +208,7 @@ A concrete example for Automation is a Rail Automation system. The [Europe's Rai
 
 This document uses terms defined in [RFC5280]. X.509 certificate extensions are defined using ASN.1 [X.680] and [X.690].
 
-The term 'safety-critical communication' refers to communication that could, under certain conditions, lead to a state in which human life, health, property, or the environment is endangered. For the definition of 'safety', see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
+The term 'safety-critical communication' refers to communication that could, under certain conditions, lead to a state in which human life, health, property, or the environment is endangered. For the definition of 'safety' see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
 
 
 # Extended Key Purpose for Automation {#EKU}
@@ -273,7 +274,7 @@ To reduce the risk of specific cross-protocol attacks, the relying party may add
 
 # Privacy Considerations {#privacy}
 
-In some security protocols, such as [TLS 1.2](#RFC5246), certificates are exchanged in the clear. In other security protocols, such as [TLS 1.3](#RFC8446), the certificates are encrypted. The inclusion of the EKU extension can help an observer determine the purpose of the certificate. In addition, if the certificate is issued by a public certification authority, the inclusion of an EKU extension can help an attacker to monitor the Certificate Transparency logs {{RFC9162}} to identify the purpose of the certificate.
+In some security protocols, such as [TLS 1.2](#RFC5246), certificates are exchanged in the clear. In other security protocols, such as [TLS 1.3](#RFC8446), the certificates are encrypted. The inclusion of the EKU extension can help an observer determine the purpose of the certificate. In addition, if the certificate is issued by a public certification authority, the inclusion of an EKU extension can help an attacker to monitor the Certificate Transparency logs {{RFC9162}} to identify the purpose of the certificate which may reveal private information of the certificate subject.
 
 
 # IANA Considerations {#iana}
@@ -346,7 +347,7 @@ END
 
 Changes from 05 -> 06:
 
-* Addressed AD review comments from Andy Newton, Mohamed Boucadair, Erik Kline, and Eric Vyncke
+* Addressed AD review comments from Gorry Fairhurst, Andy Newton, Mohamed Boucadair, Erik Kline, and Eric Vyncke
 
 Changes from 04 -> 05:
 
