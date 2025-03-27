@@ -162,7 +162,7 @@ Table of Contents
    to cyber security driven by federal offices like the European Union
    Cyber Resilience Act [EU-CRA] governed by the European Commission and
    the High Representative of the Union for Foreign Affairs and Security
-   Policy.  Automation products connected to the internet would bear the
+   Policy.  Automation products connected to the Internet would bear the
    so called CE marking [CE-marking] to indicate they comply.  Such
    regulation was announced in the 2020 EU Cybersecurity Strategy
    [EU-STRATEGY], and complements other legislation in this area,
@@ -176,7 +176,7 @@ Table of Contents
    and system security - Part 3-3: System security requirements and
    security levels [IEC.62443-3-3].  Automation hardware and software
    products of diverse vendors that are connected on automation networks
-   and the internet can be used to build common automation solutions.
+   and the Internet can be used to build common automation solutions.
    Standardized attributes would allow transparency of security
    properties and interoperability for vendors in context of software
    and firmware updates, general-purpose configuration, trust anchor
@@ -555,8 +555,8 @@ Appendix B.  History of Changes
 
    Changes from 05 -> 06:
 
-   *  Addressed AD review comments from Gorry Fairhurst, Andy Newton,
-      Mohamed Boucadair, Erik Kline, and Eric Vyncke
+   *  Addressed AD review comments from Mike Bishop, Gorry Fairhurst,
+      Andy Newton, Mohamed Boucadair, Erik Kline, and Eric Vyncke
 
    Changes from 04 -> 05:
 
