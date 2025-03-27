@@ -148,13 +148,12 @@ Table of Contents
    KeyPurposeIds to ensure interoperability across various vendors and
    industries.
 
-   Although this specification focuses on use in industrial automation,
-   the definitions are intentionally broad to allow the use of the
-   KeyPurposeIds defined in this document in other deployments as well.
-   The context in which the KeyPurposeIds defined in this document are
-   used is out of scope for this document.  In other words, details must
-   be described in technical standards and certificate policies for
-   those implementations.
+   This specification focuses on use in industrial automation and rail
+   automation.  The definitions are intentionally broad to also allow
+   use of the KeyPurposeIds in other deployments.  The context in which
+   the KeyPurposeIds defined in this document are used is out of scope
+   for this document.  The details for each deployment needs to be
+   described in technical standards and certificate policies.
 
 1.1.  Use Cases
 
@@ -177,11 +176,11 @@ Table of Contents
    and system security - Part 3-3: System security requirements and
    security levels [IEC.62443-3-3].  Automation hardware and software
    products of diverse vendors that are connected on automation networks
-   and the internet build common automation solutions.  Standardized
-   attributes would allow transparency of security properties and
-   interoperability for vendors in context of software and firmware
-   updates, general-purpose configuration, trust anchor configuration,
-   and safety communication.
+   and the internet can be used to build common automation solutions.
+   Standardized attributes would allow transparency of security
+   properties and interoperability for vendors in context of software
+   and firmware updates, general-purpose configuration, trust anchor
+   configuration, and safety communication.
 
    A concrete example for Automation is a Rail Automation system.  The
    Europe's Rail Joint Undertaking System Pillar [ERJU] deliver a
@@ -206,7 +205,7 @@ Table of Contents
    The term 'safety-critical communication' refers to communication that
    could, under certain conditions, lead to a state in which human life,
    health, property, or the environment is endangered.  For the
-   definition of 'safety', see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
+   definition of 'safety' see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
 
 3.  Extended Key Purpose for Automation
 
@@ -358,7 +357,8 @@ Table of Contents
    certificate.  In addition, if the certificate is issued by a public
    certification authority, the inclusion of an EKU extension can help
    an attacker to monitor the Certificate Transparency logs [RFC9162] to
-   identify the purpose of the certificate.
+   identify the purpose of the certificate which may reveal private
+   information of the certificate subject.
 
 8.  IANA Considerations
 
@@ -555,8 +555,8 @@ Appendix B.  History of Changes
 
    Changes from 05 -> 06:
 
-   *  Addressed AD review comments from Andy Newton, Mohamed Boucadair,
-      Erik Kline, and Eric Vyncke
+   *  Addressed AD review comments from Gorry Fairhurst, Andy Newton,
+      Mohamed Boucadair, Erik Kline, and Eric Vyncke
 
    Changes from 04 -> 05:
 
