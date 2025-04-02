@@ -346,7 +346,7 @@ Table of Contents
    example of excluded KeyPurposeIds can be the presence of the
    anyExtendedKeyUsage KeyPurposeId.  Examples of allowed KeyPurposeIds
    combinations can be the presence of id-kp-safetyCommunication
-   together with id-kp-clinetAuth or id-kp-serverAuth.
+   together with id-kp-clientAuth or id-kp-serverAuth.
 
 7.  Privacy Considerations
 
@@ -554,6 +554,8 @@ Appendix B.  History of Changes
    the document.]
 
    Changes from 06 -> 07:
+
+   *  Addressed AD review comments from Orie Steele
 
    *  Updated reference of EU Rail specification to V1.0
 

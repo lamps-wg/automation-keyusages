@@ -1355,7 +1355,7 @@ Trust anchor configuration files are used to add or remove trust anchors to the 
 <a href="#section-6" class="section-number selfRef">6. </a><a href="#name-security-considerations" class="section-name selfRef">Security Considerations</a>
       </h2>
 <p id="section-6-1">The Security Considerations of <span>[<a href="#RFC5280" class="cite xref">RFC5280</a>]</span> are applicable to this document. These extended key usage key purposes do not introduce new security risks but instead reduce existing security risks by providing the means to identify if the certificate is generated to verify the signature of a general-purpose or trust anchor configuration file, the signature of a software or firmware update package, or the authentication of a communication peer for safety-critical communication.<a href="#section-6-1" class="pilcrow">¶</a></p>
-<p id="section-6-2">To reduce the risk of specific cross-protocol attacks, the relying party may additionally prohibit use of specific combinations of KeyPurposeIds.  The procedure for allowing or disallowing combinations of KeyPurposeIds using excluded KeyPurposeId and permitted KeyPurposeId, as carried out by a relying party, is defined in <span><a href="https://rfc-editor.org/rfc/rfc9336#section-4" class="relref">Section 4</a> of [<a href="#RFC9336" class="cite xref">RFC9336</a>]</span>.  The technical standards and certificate policies of the application should explicitly enumerate requirements for excluded or permitted KeyPurposeIds or their combinations. An example of excluded KeyPurposeIds can be the presence of the anyExtendedKeyUsage KeyPurposeId. Examples of allowed KeyPurposeIds combinations can be the presence of id-kp-safetyCommunication together with id-kp-clinetAuth or id-kp-serverAuth.<a href="#section-6-2" class="pilcrow">¶</a></p>
+<p id="section-6-2">To reduce the risk of specific cross-protocol attacks, the relying party may additionally prohibit use of specific combinations of KeyPurposeIds.  The procedure for allowing or disallowing combinations of KeyPurposeIds using excluded KeyPurposeId and permitted KeyPurposeId, as carried out by a relying party, is defined in <span><a href="https://rfc-editor.org/rfc/rfc9336#section-4" class="relref">Section 4</a> of [<a href="#RFC9336" class="cite xref">RFC9336</a>]</span>.  The technical standards and certificate policies of the application should explicitly enumerate requirements for excluded or permitted KeyPurposeIds or their combinations. An example of excluded KeyPurposeIds can be the presence of the anyExtendedKeyUsage KeyPurposeId. Examples of allowed KeyPurposeIds combinations can be the presence of id-kp-safetyCommunication together with id-kp-clientAuth or id-kp-serverAuth.<a href="#section-6-2" class="pilcrow">¶</a></p>
 </section>
 </div>
 <div id="privacy">
@@ -1591,7 +1591,10 @@ END
 <p id="appendix-B-2">Changes from 06 -&gt; 07:<a href="#appendix-B-2" class="pilcrow">¶</a></p>
 <ul class="normal">
 <li class="normal" id="appendix-B-3.1">
-          <p id="appendix-B-3.1.1">Updated reference of EU Rail specification to V1.0<a href="#appendix-B-3.1.1" class="pilcrow">¶</a></p>
+          <p id="appendix-B-3.1.1">Addressed AD review comments from Orie Steele<a href="#appendix-B-3.1.1" class="pilcrow">¶</a></p>
+</li>
+        <li class="normal" id="appendix-B-3.2">
+          <p id="appendix-B-3.2.1">Updated reference of EU Rail specification to V1.0<a href="#appendix-B-3.2.1" class="pilcrow">¶</a></p>
 </li>
       </ul>
 <p id="appendix-B-4">Changes from 05 -&gt; 06:<a href="#appendix-B-4" class="pilcrow">¶</a></p>
