@@ -149,7 +149,7 @@ Table of Contents
    industries.
 
    This specification focuses on use in automation.  The definitions are
-   intentionally broad to also allow use of the KeyPurposeIds in other
+   intentionally broad to allow use of the KeyPurposeIds in different
    deployments.  The details for each deployment needs to be described
    in technical standards and certificate policies.
 
