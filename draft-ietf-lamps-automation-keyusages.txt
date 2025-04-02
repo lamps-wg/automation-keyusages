@@ -148,39 +148,37 @@ Table of Contents
    KeyPurposeIds to ensure interoperability across various vendors and
    industries.
 
-   This specification focuses on use in industrial automation and rail
-   automation.  The definitions are intentionally broad to also allow
-   use of the KeyPurposeIds in other deployments.  The context in which
-   the KeyPurposeIds defined in this document are used is out of scope
-   for this document.  The details for each deployment needs to be
-   described in technical standards and certificate policies.
+   This specification focuses on use in automation.  The definitions are
+   intentionally broad to also allow use of the KeyPurposeIds in other
+   deployments.  The details for each deployment needs to be described
+   in technical standards and certificate policies.
 
 1.1.  Use Cases
 
-   Automation hardware and software products will become more safe and
-   secure by fulfilling mandatory, generic system requirements related
-   to cyber security driven by federal offices like the European Union
-   Cyber Resilience Act [EU-CRA] governed by the European Commission and
-   the High Representative of the Union for Foreign Affairs and Security
-   Policy.  Automation products connected to the Internet would bear the
-   so called CE marking [CE-marking] to indicate they comply.  Such
-   regulation was announced in the 2020 EU Cybersecurity Strategy
-   [EU-STRATEGY], and complements other legislation in this area,
-   specifically the NIS2 Framework, Directive on measures for a high
-   common level of cybersecurity across the Union [NIS2]. 2020 EU
-   Cybersecurity Strategy suggests to implement and extend international
-   standards such as the Security for industrial automation and control
-   systems - Part 4-2: Technical security requirements for IACS
-   components [IEC.62443-4-2] (IACS refers to industrial automation and
-   control system) and the Industrial communication networks - Network
-   and system security - Part 3-3: System security requirements and
-   security levels [IEC.62443-3-3].  Automation hardware and software
-   products of diverse vendors that are connected on automation networks
-   and the Internet can be used to build common automation solutions.
-   Standardized attributes would allow transparency of security
-   properties and interoperability for vendors in context of software
-   and firmware updates, general-purpose configuration, trust anchor
-   configuration, and safety communication.
+   Automation hardware and software products strive to become more safe
+   and secure by fulfilling mandatory, generic system requirements
+   related to cyber security driven by federal offices like the European
+   Union Cyber Resilience Act [EU-CRA] governed by the European
+   Commission and the High Representative of the Union for Foreign
+   Affairs and Security Policy.  Automation products connected to the
+   Internet would bear the so called CE marking [CE-marking] to indicate
+   they comply.  Such regulation was announced in the 2020 EU
+   Cybersecurity Strategy [EU-STRATEGY], and complements other
+   legislation in this area, specifically the NIS2 Framework, Directive
+   on measures for a high common level of cybersecurity across the Union
+   [NIS2]. 2020 EU Cybersecurity Strategy suggests to implement and
+   extend international standards such as the Security for industrial
+   automation and control systems - Part 4-2: Technical security
+   requirements for IACS components [IEC.62443-4-2] (IACS refers to
+   industrial automation and control system) and the Industrial
+   communication networks - Network and system security - Part 3-3:
+   System security requirements and security levels [IEC.62443-3-3].
+   Automation hardware and software products of diverse vendors that are
+   connected on automation networks and the Internet can be used to
+   build common automation solutions.  Standardized attributes would
+   allow transparency of security properties and interoperability for
+   vendors in context of software and firmware updates, general-purpose
+   configuration, trust anchor configuration, and safety communication.
 
    A concrete example for Automation is a Rail Automation system.  The
    Europe's Rail Joint Undertaking System Pillar [ERJU] deliver a
@@ -556,6 +554,8 @@ Appendix B.  History of Changes
    Changes from 06 -> 07:
 
    *  Addressed AD review comments from Orie Steele
+
+   *  Fixed some minor issues
 
    *  Updated reference of EU Rail specification to V1.0
 
