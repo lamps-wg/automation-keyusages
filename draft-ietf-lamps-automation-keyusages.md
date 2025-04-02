@@ -103,11 +103,11 @@ informative:
       org: European Parliament, Council of the European Union
     date: '2020-05-28'
   ERJU:
-    target: https://rail-research.europa.eu/wp-content/uploads/2023/10/ERJU_SP_CyberSecurity_Review3_Files.zip
-    title: 'SP-Cybersecurity-SharedCybersecurityServices - Review 3 Final Draft Specs (V0.90)'
+    target: https://rail-research.europa.eu/wp-content/uploads/2025/03/ERJU-SP-Cybersecurity-Specifications-V1.0.zip
+    title: 'Shared Cybersecurity Services Specification - SP-SEC-ServSpec - V1.0'
     author:
       org: Europe's Rail Joint Undertaking
-    date: '2024-09-23'
+    date: '2025-02'
   EU-CRA :
     target: https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
     title: 'Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal cybersecurity requirements for products with digital elements and amending Regulation (EU) 2019/1020'
@@ -344,6 +344,10 @@ END
 # History of Changes {#history}
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
+
+Changes from 06 -> 07:
+
+* Updated reference of EU Rail specification to V1.0
 
 Changes from 05 -> 06:
 
