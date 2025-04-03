@@ -148,15 +148,11 @@ Table of Contents
    KeyPurposeIds to ensure interoperability across various vendors and
    industries.
 
-   This specification focuses on use in automation.  The definitions are
-   intentionally broad to allow use of the KeyPurposeIds in different
-   deployments.  The details for each deployment needs to be described
-   in technical standards and certificate policies.  The definitions of
-   theses KeyPurposeIds are intentionally broad to allow their use in
-   different deployments even though they were initially motivated by
-   industrial automation and rail automation, see Section 1.1.  The
-   details for each deployment needs to be described in the relevant
-   technical standards and certificate policies.
+   The definitions of theses KeyPurposeIds are intentionally broad to
+   allow their use in different deployments even though they were
+   initially motivated by industrial automation and rail automation, see
+   Section 1.1.  The details for each deployment needs to be described
+   in the relevant technical standards and certificate policies.
 
 1.1.  Use Cases
 
