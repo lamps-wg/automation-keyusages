@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 4 October 2025                                 Siemens Mobility
-                                                            2 April 2025
+Expires: 5 October 2025                                 Siemens Mobility
+                                                            3 April 2025
 
 
        X.509 Certificate Extended Key Usage (EKU) for Automation
@@ -48,7 +48,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 4 October 2025.
+   This Internet-Draft will expire on 5 October 2025.
 
 Copyright Notice
 
@@ -151,7 +151,12 @@ Table of Contents
    This specification focuses on use in automation.  The definitions are
    intentionally broad to allow use of the KeyPurposeIds in different
    deployments.  The details for each deployment needs to be described
-   in technical standards and certificate policies.
+   in technical standards and certificate policies.  The definitions of
+   theses KeyPurposeIds are intentionally broad to allow their use in
+   different deployments even though they were initially motivated by
+   industrial automation and rail automation, see Section 1.1.  The
+   details for each deployment needs to be described in the relevant
+   technical standards and certificate policies.
 
 1.1.  Use Cases
 
@@ -225,12 +230,12 @@ Table of Contents
    document and with other KeyPurposeIds specified elsewhere are left to
    the technical standards of the respective application and the
    certificate policy of the respective PKI.  For example, a technical
-   standard may specify: 'Different keys and certificates MUST be used
+   standard may specify: 'Different keys and certificates must be used
    for safety communication and for trust anchor updates, and a relying
-   party MUST ignore the KeyPurposeId id-kp-trustAnchorConfigSigning if
+   party must ignore the KeyPurposeId id-kp-trustAnchorConfigSigning if
    id-kp-safetyCommunication is one of the specified key purposes in a
    certificate.'  The certificate policy for example may specify: 'The
-   id-kp-safetyCommunication KeyPuposeId SHOULD NOT be included in an
+   id-kp-safetyCommunication KeyPuposeId should not be included in an
    issued certificate together with the KeyPurposeId id-kp-
    trustAnchorConfigSigning.'  Technical standards and certificate
    policies of different applications may specify other rules.  Further
@@ -315,7 +320,7 @@ Table of Contents
 5.  Implications for a Certification Authority
 
    The procedures and practices employed by a certification authority
-   MUST ensure that the correct values for the EKU extension as well as
+   must ensure that the correct values for the EKU extension as well as
    the KU extension are inserted in each certificate that is issued.
    The inclusion of the id-kp-configSigning, id-kp-
    trustAnchorConfigSigning, id-kp-updatePackageSigning, and id-kp-
@@ -362,7 +367,9 @@ Table of Contents
 
    IANA is requested to register the following ASN.1 [X.680] module OID
    in the "SMI Security for PKIX Module Identifier" registry
-   (1.3.6.1.5.5.7.0).  This OID is defined in Appendix A.
+   1.3.6.1.5.5.7.0 (see https://www.iana.org/assignments/smi-numbers/
+   smi-numbers.xhtml#smi-numbers-1.3.6.1.5.5.7.0).  This OID is defined
+   in Appendix A.
 
              +=========+=======================+============+
              | Decimal | Description           | References |
@@ -373,8 +380,9 @@ Table of Contents
                                  Table 1
 
    IANA is also requested to register the following OIDs in the "SMI
-   Security for PKIX Extended Key Purpose" registry (1.3.6.1.5.5.7.3).
-   These OIDs are defined in Section 4.
+   Security for PKIX Extended Key Purpose" registry 1.3.6.1.5.5.7.3 (see
+   https://www.iana.org/assignments/smi-numbers/smi-numbers.xhtml#smi-
+   numbers-1.3.6.1.5.5.7.3).  These OIDs are defined in Section 4.
 
          +=========+================================+============+
          | Decimal | Description                    | References |
@@ -553,7 +561,7 @@ Appendix B.  History of Changes
 
    Changes from 06 -> 07:
 
-   *  Addressed AD review comments from Orie Steele
+   *  Addressed AD review comments from Paul Wouters and Orie Steele
 
    *  Fixed some minor issues
 
