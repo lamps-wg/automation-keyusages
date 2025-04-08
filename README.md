@@ -2,7 +2,7 @@
 
 This is an individual submission that is supposed to be submitted to IETF [LAMPS Working Group](https://datatracker.ietf.org/wg/lamps/).
 
-## X.509 Certificate Extended Key Usage (EKU) for ERJU System Pillar
+## X.509 Extended Key Usage (EKU) for configuration, updates and safety-communication
 
 * [Editor's Copy](https://lamps-wg.github.io/automation-keyusages/#go.draft-ietf-lamps-automation-keyusages.html)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-ietf-lamps-automation-keyusages)
