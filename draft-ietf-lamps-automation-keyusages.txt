@@ -9,7 +9,8 @@ Expires: 10 October 2025                                Siemens Mobility
                                                             8 April 2025
 
 
-       X.509 Certificate Extended Key Usage (EKU) for Automation
+ X.509 Extended Key Usage (EKU) for configuration, updates and safety-
+                             communication
               draft-ietf-lamps-automation-keyusages-latest
 
 Abstract
@@ -68,7 +69,8 @@ Table of Contents
 
    1.  Introduction
    2.  Conventions and Definitions
-   3.  Extended Key Purpose for Automation
+   3.  Extended Key Purpose for configuration files, update packages
+           and safety-communication
    4.  Including the Extended Key Purpose in Certificates
    5.  Implications for a Certification Authority
    6.  Security Considerations
@@ -171,7 +173,8 @@ Table of Contents
    health, property, or the environment is endangered.  For the
    definition of 'safety' see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
 
-3.  Extended Key Purpose for Automation
+3.  Extended Key Purpose for configuration files, update packages and
+    safety-communication
 
    This specification defines the KeyPurposeIds id-kp-configSigning, id-
    kp-trustAnchorConfigSigning, id-kp-updatePackageSigning, and id-kp-
@@ -331,11 +334,11 @@ Table of Contents
    in the "SMI Security for PKIX Module Identifier" registry
    [SMI-PKIX-MOD].  This OID is defined in Appendix A.
 
-             +=========+=======================+============+
-             | Decimal | Description           | References |
-             +=========+=======================+============+
-             | TBD1    | id-mod-automation-eku | This-RFC   |
-             +---------+-----------------------+------------+
+          +=========+=============================+============+
+          | Decimal | Description                 | References |
+          +=========+=============================+============+
+          | TBD1    | id-mod-config-update-sc-eku | This-RFC   |
+          +---------+-----------------------------+------------+
 
                                  Table 1
 
@@ -500,7 +503,7 @@ Appendix A.  ASN.1 Module
    Automation-EKU
      { iso(1) identified-organization(3) dod(6) internet(1)
        security(5) mechanisms(5) pkix(7) id-mod(0)
-       id-mod-automation-eku (TBD1) }
+       id-mod-config-update-sc-eku (TBD1) }
 
    DEFINITIONS IMPLICIT TAGS ::=
    BEGIN
@@ -641,7 +644,7 @@ Appendix C.  History of Changes
 Contributors
 
    Szofia Fazekas-Zisch
-   Siemens AG Digital Industries Factory Automation
+   Siemens AG
    Breslauer Str. 5
    90766 Fuerth
    Germany

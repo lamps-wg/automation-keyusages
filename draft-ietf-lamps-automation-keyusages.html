@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta content="Common,Latin" name="scripts">
 <meta content="initial-scale=1.0" name="viewport">
-<title>X.509 Certificate Extended Key Usage (EKU) for Automation</title>
+<title>X.509 Extended Key Usage (EKU) for configuration, updates and safety-communication</title>
 <meta content="Hendrik Brockhaus" name="author">
 <meta content="David Goltzsche" name="author">
 <meta content="
@@ -1048,7 +1048,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 <table class="ears">
 <thead><tr>
 <td class="left">Internet-Draft</td>
-<td class="center">EKU for Automation</td>
+<td class="center">EKU for config, update, and safety</td>
 <td class="right">April 2025</td>
 </tr></thead>
 <tfoot><tr>
@@ -1085,7 +1085,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
 </dd>
 </dl>
 </div>
-<h1 id="title">X.509 Certificate Extended Key Usage (EKU) for Automation</h1>
+<h1 id="title">X.509 Extended Key Usage (EKU) for configuration, updates and safety-communication</h1>
 <section id="section-abstract">
       <h2 id="abstract"><a href="#abstract" class="selfRef">Abstract</a></h2>
 <p id="section-abstract-1">RFC 5280 defines the Extended Key Usage (EKU) extension and several extended key purposes (KeyPurposeIds) for use with that extension in X.509 certificates.  This document defines KeyPurposeIds for general-purpose and trust anchor configuration files, for software and firmware update packages, and for safety-critical communication to be included in the EKU extension of X.509 v3 public key certificates.<a href="#section-abstract-1" class="pilcrow">¶</a></p>
@@ -1156,7 +1156,7 @@ svg :is([fill="white"], [fill^="#fff"]) {
             <p id="section-toc.1-1.2.1" class="keepWithNext"><a href="#section-2" class="auto internal xref">2</a>.  <a href="#name-conventions-and-definitions" class="internal xref">Conventions and Definitions</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.3">
-            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-extended-key-purpose-for-au" class="internal xref">Extended Key Purpose for Automation</a></p>
+            <p id="section-toc.1-1.3.1" class="keepWithNext"><a href="#section-3" class="auto internal xref">3</a>.  <a href="#name-extended-key-purpose-for-co" class="internal xref">Extended Key Purpose for configuration files, update packages and safety-communication</a></p>
 </li>
           <li class="compact toc ulBare ulEmpty" id="section-toc.1-1.4">
             <p id="section-toc.1-1.4.1"><a href="#section-4" class="auto internal xref">4</a>.  <a href="#name-including-the-extended-key-" class="internal xref">Including the Extended Key Purpose in Certificates</a></p>
@@ -1249,8 +1249,8 @@ appear in all capitals, as shown here.<a href="#section-2-1" class="pilcrow">¶<
 </div>
 <div id="EKU">
 <section id="section-3">
-      <h2 id="name-extended-key-purpose-for-au">
-<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-extended-key-purpose-for-au" class="section-name selfRef">Extended Key Purpose for Automation</a>
+      <h2 id="name-extended-key-purpose-for-co">
+<a href="#section-3" class="section-number selfRef">3. </a><a href="#name-extended-key-purpose-for-co" class="section-name selfRef">Extended Key Purpose for configuration files, update packages and safety-communication</a>
       </h2>
 <p id="section-3-1">This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustAnchorConfigSigning, id-kp-updatePackageSigning, and id-kp-safetyCommunication. These KeyPurposeIds are used, respectively, for: signing general-purpose configuration files or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in <span><a href="https://rfc-editor.org/rfc/rfc5280#section-4.2.1.12" class="relref">Section 4.2.1.12</a> of [<a href="#RFC5280" class="cite xref">RFC5280</a>]</span>, "[i]f the [extended key usage] extension is present, then the certificate <span class="bcp14">MUST</span> only be used for one of the purposes indicated" and "[i]f multiple [key] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".<a href="#section-3-1" class="pilcrow">¶</a></p>
 <p id="section-3-2">None of the KeyPurposeIds specified in this document are intrinsically mutually exclusive.  Instead, the acceptable combinations of those KeyPurposeIds with others specified in this document and with other KeyPurposeIds specified elsewhere are left to the technical standards of the respective application and the certificate policy of the respective PKI.  For example, a technical standard may specify: 'Different keys and certificates must be used for safety communication and for trust anchor updates, and a relying party must ignore the KeyPurposeId id-kp-trustAnchorConfigSigning if id-kp-safetyCommunication is one of the specified key purposes in a certificate.' The certificate policy for example may specify: 'The id-kp-safetyCommunication KeyPuposeId should not be included in an issued certificate together with the KeyPurposeId id-kp-trustAnchorConfigSigning.' Technical standards and certificate policies of different applications may specify other rules.  Further considerations on prohibiting combinations of KeyPurposeIds is described in <a href="#security" class="auto internal xref">Section 6</a>.<a href="#section-3-2" class="pilcrow">¶</a></p>
@@ -1369,7 +1369,7 @@ Trust anchor configuration files are used to add or remove trust anchors to the 
         <tbody>
           <tr>
             <td class="text-left" rowspan="1" colspan="1">TBD1</td>
-            <td class="text-left" rowspan="1" colspan="1">id-mod-automation-eku</td>
+            <td class="text-left" rowspan="1" colspan="1">id-mod-config-update-sc-eku</td>
             <td class="text-left" rowspan="1" colspan="1">This-RFC</td>
           </tr>
         </tbody>
@@ -1549,7 +1549,7 @@ Trust anchor configuration files are used to add or remove trust anchors to the 
 Automation-EKU
   { iso(1) identified-organization(3) dod(6) internet(1)
     security(5) mechanisms(5) pkix(7) id-mod(0)
-    id-mod-automation-eku (TBD1) }
+    id-mod-config-update-sc-eku (TBD1) }
 
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
@@ -1701,7 +1701,7 @@ Such regulation was announced in the <span><a href="#EU-STRATEGY" class="interna
       </h2>
 <address class="vcard">
         <div dir="auto" class="left"><span class="fn nameRole">Szofia Fazekas-Zisch</span></div>
-<div dir="auto" class="left"><span class="org">Siemens AG Digital Industries Factory Automation</span></div>
+<div dir="auto" class="left"><span class="org">Siemens AG</span></div>
 <div dir="auto" class="left"><span class="street-address">Breslauer Str. 5</span></div>
 <div dir="auto" class="left">
 <span class="postal-code">90766</span> <span class="locality">Fuerth</span>
