@@ -91,7 +91,6 @@ normative:
 
 informative:
   RFC5246:
-  RFC7299:
   RFC8446:
   RFC9162:
   RFC9336:
