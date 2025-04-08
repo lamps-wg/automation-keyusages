@@ -10,8 +10,8 @@ pi:
   tocdepth: '3'
   symrefs: 'true'
   sortrefs: 'false'
-title: X.509 Certificate Extended Key Usage (EKU) for Automation
-abbrev: EKU for Automation
+title: X.509 Extended Key Usage (EKU) for configuration, updates and safety-communication
+abbrev: EKU for config, update, and safety
 area: sec
 wg: LAMPS Working Group
 keyword:
@@ -41,7 +41,7 @@ author:
   uri: https://www.mobility.siemens.com
 contributor:
 - name: Szofia Fazekas-Zisch
-  org: Siemens AG Digital Industries Factory Automation
+  org: Siemens AG
   abbrev: Siemens
   street: Breslauer Str. 5
   code: '90766'
@@ -213,7 +213,7 @@ This document uses terms defined in [RFC5280]. X.509 certificate extensions are 
 The term 'safety-critical communication' refers to communication that could, under certain conditions, lead to a state in which human life, health, property, or the environment is endangered. For the definition of 'safety' see [NIST_Glossary] and [ISO.IEC.IEEE_12207].
 
 
-# Extended Key Purpose for Automation {#EKU}
+# Extended Key Purpose for configuration files, update packages and safety-communication {#EKU}
 
 This specification defines the KeyPurposeIds id-kp-configSigning, id-kp-trustAnchorConfigSigning, id-kp-updatePackageSigning, and id-kp-safetyCommunication. These KeyPurposeIds are used, respectively, for: signing general-purpose configuration files or trust anchor configuration files, signing software or firmware update packages, or authenticating communication peers for safety-critical communication. As described in {{Section 4.2.1.12 of RFC5280}}, "\[i\]f the \[extended key usage\] extension is present, then the certificate MUST only be used for one of the purposes indicated" and "\[i\]f multiple \[key\] purposes are indicated the application need not recognize all purposes indicated, as long as the intended purpose is present".
 
@@ -283,9 +283,9 @@ In some protocols, e.g., [TLS 1.2](#RFC5246), certificates are exchanged in the 
 
 IANA is requested to register the following ASN.1 {{X.680}} module OID in the "SMI Security for PKIX Module Identifier" registry {{SMI-PKIX-MOD}}. This OID is defined in {{asn1}}.
 
-| Decimal | Description            | References |
-|:--------|:-----------------------|:-----------|
-| TBD1    | id-mod-automation-eku  | This-RFC   |
+| Decimal | Description                  | References |
+|:--------|:-----------------------------|:-----------|
+| TBD1    | id-mod-config-update-sc-eku  | This-RFC   |
 
 
 IANA is also requested to register the following OIDs in the "SMI Security for PKIX Extended Key Purpose" registry {{SMI-PKIX-PURPOSE}}.  These OIDs are defined in {{include-EKU}}.
@@ -318,7 +318,7 @@ The following module adheres to ASN.1 specifications {{X.680}} and
 Automation-EKU
   { iso(1) identified-organization(3) dod(6) internet(1)
     security(5) mechanisms(5) pkix(7) id-mod(0)
-    id-mod-automation-eku (TBD1) }
+    id-mod-config-update-sc-eku (TBD1) }
 
 DEFINITIONS IMPLICIT TAGS ::=
 BEGIN
