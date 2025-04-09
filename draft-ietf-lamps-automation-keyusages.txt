@@ -5,8 +5,8 @@
 LAMPS Working Group                                         H. Brockhaus
 Internet-Draft                                                   Siemens
 Intended status: Standards Track                            D. Goltzsche
-Expires: 10 October 2025                                Siemens Mobility
-                                                            8 April 2025
+Expires: 11 October 2025                                Siemens Mobility
+                                                            9 April 2025
 
 
  X.509 Extended Key Usage (EKU) for configuration, updates and safety-
@@ -49,7 +49,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 10 October 2025.
+   This Internet-Draft will expire on 11 October 2025.
 
 Copyright Notice
 
@@ -405,10 +405,6 @@ Table of Contents
               DOI 10.17487/RFC5246, August 2008,
               <https://www.rfc-editor.org/rfc/rfc5246>.
 
-   [RFC7299]  Housley, R., "Object Identifier Registry for the PKIX
-              Working Group", RFC 7299, DOI 10.17487/RFC7299, July 2014,
-              <https://www.rfc-editor.org/rfc/rfc7299>.
-
    [RFC8446]  Rescorla, E., "The Transport Layer Security (TLS) Protocol
               Version 1.3", RFC 8446, DOI 10.17487/RFC8446, August 2018,
               <https://www.rfc-editor.org/rfc/rfc8446>.
@@ -438,6 +434,10 @@ Table of Contents
               2025, <https://rail-research.europa.eu/wp-
               content/uploads/2025/03/ERJU-SP-Cybersecurity-
               Specifications-V1.0.zip>.
+
+   [ERJU-web] Europe's Rail Joint Undertaking, "Europe’s Rail Joint
+              Undertaking - System Pillar",
+              <https://rail-research.europa.eu/system_pillar/>.
 
    [EU-CRA]   European Commission, "Proposal for a REGULATION OF THE
               EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal
@@ -528,41 +528,45 @@ Appendix A.  ASN.1 Module
 
 Appendix B.  Use Cases
 
+   These use cases are only for informational purposes.
+
    Automation hardware and software products strive to become more safe
    and secure by fulfilling mandatory, generic system requirements
-   related to cyber security driven by federal offices like the European
-   Union Cyber Resilience Act [EU-CRA] governed by the European
+   related to cyber security, e.g., driven by federal offices like the
+   European Union Cyber Resilience Act [EU-CRA] governed by the European
    Commission and the High Representative of the Union for Foreign
    Affairs and Security Policy.  Automation products connected to the
    Internet would bear the so-called CE marking [CE-marking] to indicate
    they comply.  Such regulation was announced in the 2020 EU
    Cybersecurity Strategy [EU-STRATEGY], and complements other
-   legislation in this area, specifically the NIS2 Framework, Directive
-   on measures for a high common level of cybersecurity across the Union
+   legislation in this area, like the NIS2 Framework, Directive on
+   measures for a high common level of cybersecurity across the Union
    [NIS2].
 
-   2020 EU Cybersecurity Strategy suggests to implement and extend
-   international standards such as the Security for industrial
-   automation and control systems - Part 4-2: Technical security
-   requirements for IACS components [IEC.62443-4-2] (IACS refers to
-   industrial automation and control system) and the Industrial
-   communication networks - Network and system security - Part 3-3:
-   System security requirements and security levels [IEC.62443-3-3].
-   Automation hardware and software products of diverse vendors that are
-   connected on automation networks and the Internet can be used to
-   build common automation solutions.  Standardized attributes would
-   allow transparency of security properties and interoperability for
-   vendors in context of software and firmware updates, general-purpose
-   configuration, trust anchor configuration, and safety communication.
+   2020 EU Cybersecurity Strategy [EU-STRATEGY] suggests to implement
+   and extend international standards such as the Security for
+   industrial automation and control systems - Part 4-2: Technical
+   security requirements for IACS components [IEC.62443-4-2] (IACS
+   refers to industrial automation and control system) and the
+   Industrial communication networks - Network and system security -
+   Part 3-3: System security requirements and security levels
+   [IEC.62443-3-3].  Automation hardware and software products of
+   diverse vendors that are connected on automation networks and the
+   Internet can be used to build common automation solutions.
+   Standardized attributes would allow transparency of security
+   properties and interoperability for vendors in context of software
+   and firmware updates, general-purpose configuration, trust anchor
+   configuration, and safety communication.
 
-   A concrete example for Automation is a Rail Automation system.  The
-   Europe's Rail Joint Undertaking System Pillar [ERJU] delivers a
-   unified operational concept and a functional, safe, and secure system
-   architecture with system requirements for Rail Automation.  The
-   deliverables include due consideration of cyber security aspects
-   based on the IEC 62443 series of standards, focused on the European
-   railway network to which Directive 2016/797 - Interoperability of the
-   rail system within the EU [Directive-2016_797] applies.
+   A concrete example for automation is a Rail Automation system.  The
+   Europe's Rail web page [ERJU-web] states: "The System Pillar [ERJU]
+   brings rail sector representatives under a single coordination body.
+   To achieve this, the System Pillar will deliver a unified operational
+   concept and a functional, safe and secure system architecture, with
+   due consideration of cyber-security aspects, focused on the European
+   railway network to which Directive 2016/797 [Directive-2016_797]
+   applies (i.e. the heavy rail network) as well as associated
+   specifications and/or standards."
 
 Appendix C.  History of Changes
 
