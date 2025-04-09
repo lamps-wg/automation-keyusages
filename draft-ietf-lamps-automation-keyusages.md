@@ -107,6 +107,12 @@ informative:
     author:
       org: Europe's Rail Joint Undertaking
     date: '2025-02'
+  ERJU-web:
+    target: https://rail-research.europa.eu/system_pillar/
+    title: 'Europe’s Rail Joint Undertaking - System Pillar'
+    author:
+      org: Europe's Rail Joint Undertaking
+    date: false
   EU-CRA :
     target: https://digital-strategy.ec.europa.eu/en/library/cyber-resilience-act
     title: 'Proposal for a REGULATION OF THE EUROPEAN PARLIAMENT AND OF THE COUCIL on horizontal cybersecurity requirements for products with digital elements and amending Regulation (EU) 2019/1020'
@@ -343,13 +349,15 @@ END
 
 # Use Cases {#UseCases}
 
-Automation hardware and software products strive to become more safe and secure by fulfilling mandatory, generic system requirements related to cyber security driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
+These use cases are only for informational purposes.
+
+Automation hardware and software products strive to become more safe and secure by fulfilling mandatory, generic system requirements related to cyber security, e.g., driven by federal offices like the [European Union Cyber Resilience Act](#EU-CRA) governed by the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy.
 Automation products connected to the Internet would bear the so-called [CE marking](#CE-marking) to indicate they comply.
-Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, specifically the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
+Such regulation was announced in the [2020 EU Cybersecurity Strategy](#EU-STRATEGY), and complements other legislation in this area, like the NIS2 Framework, [Directive on measures for a high common level of cybersecurity across the Union](#NIS2).
 
-2020 EU Cybersecurity Strategy suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) (IACS refers to industrial automation and control system) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the Internet can be used to build common automation solutions. Standardized attributes would allow transparency of security properties and interoperability for vendors in context of software and firmware updates, general-purpose configuration, trust anchor configuration, and safety communication.
+[2020 EU Cybersecurity Strategy](#EU-STRATEGY) suggests to implement and extend international standards such as the [Security for industrial automation and control systems - Part 4-2: Technical security requirements for IACS components](#IEC.62443-4-2) (IACS refers to industrial automation and control system) and the [Industrial communication networks - Network and system security - Part 3-3: System security requirements and security levels](#IEC.62443-3-3). Automation hardware and software products of diverse vendors that are connected on automation networks and the Internet can be used to build common automation solutions. Standardized attributes would allow transparency of security properties and interoperability for vendors in context of software and firmware updates, general-purpose configuration, trust anchor configuration, and safety communication.
 
-A concrete example for Automation is a Rail Automation system. The [Europe's Rail Joint Undertaking System Pillar](#ERJU) delivers a unified operational concept and a functional, safe, and secure system architecture with system requirements for Rail Automation. The deliverables include due consideration of cyber security aspects based on the IEC 62443 series of standards, focused on the European railway network to which [Directive 2016/797 - Interoperability of the rail system within the EU](#Directive-2016/797) applies.
+A concrete example for automation is a Rail Automation system. The [Europe's Rail web page](#ERJU-web) states: "The [System Pillar](#ERJU) brings rail sector representatives under a single coordination body.  To achieve this, the System Pillar will deliver a unified operational concept and a functional, safe and secure system architecture, with due consideration of cyber-security aspects, focused on the European railway network to which [Directive 2016/797](#Directive-2016/797) applies (i.e. the heavy rail network) as well as associated specifications and/or standards."
 
 # History of Changes {#history}
 
