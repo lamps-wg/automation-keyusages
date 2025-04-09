@@ -363,6 +363,10 @@ A concrete example for automation is a Rail Automation system. The [Europe's Rai
 
 [RFC Editor: Please remove this appendix in the release version of the document.]
 
+Changes from 07 -> 08:
+
+* Updated Appendix B
+
 Changes from 06 -> 07:
 
 * Moved Section 1.1 to the Appendix
