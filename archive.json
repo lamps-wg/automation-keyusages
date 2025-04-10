@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-04-08T01:44:23.670390+00:00",
+  "timestamp": "2025-04-10T01:44:22.511157+00:00",
   "repo": "lamps-wg/automation-keyusages",
   "labels": [
     {
@@ -248,26 +248,42 @@
       "id": "PR_kwDONBBKu86RkwwD",
       "title": "Med's edits to  -07",
       "url": "https://github.com/lamps-wg/automation-keyusages/pull/4",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "boucadair",
-      "authorAssociation": "NONE",
+      "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2025-04-07T06:27:21Z",
-      "updatedAt": "2025-04-07T06:27:21Z",
+      "updatedAt": "2025-04-08T12:37:27Z",
       "baseRepository": "lamps-wg/automation-keyusages",
       "baseRefName": "main",
       "baseRefOid": "0d16c1991574f02321c81200aa1b35904efb6319",
       "headRepository": "boucadair/automation-keyusages",
       "headRefName": "patch-1",
-      "headRefOid": "6dbacbc61c8c18ec6fd7ae164c683a7f463157b7",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "22a4513bea48e8addc7c1ef87554c34e1ad7700b",
+      "closedAt": "2025-04-08T12:37:27Z",
+      "mergedAt": "2025-04-08T12:37:27Z",
+      "mergedBy": "HBrock",
+      "mergeCommit": {
+        "oid": "3bb954f42cf97d106cf01dafd8b58e9b1da87fc5"
+      },
       "comments": [],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "PRR_kwDONBBKu86j5vas",
+          "commit": {
+            "abbreviatedOid": "22a4513"
+          },
+          "author": "HBrock",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Thanks to Mohamed for the proposals",
+          "createdAt": "2025-04-08T12:36:14Z",
+          "updatedAt": "2025-04-08T12:36:14Z",
+          "comments": []
+        }
+      ]
     }
   ]
 }
